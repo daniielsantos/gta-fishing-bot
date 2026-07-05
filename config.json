@@ -1,0 +1,87 @@
+{
+  "resolution": {
+    "width": 2560,
+    "height": 1440
+  },
+  "roi": {
+    "left": 795,
+    "top": 1097,
+    "width": 960,
+    "height": 115
+  },
+  "hsv_blue": {
+    "lower": [
+      78,
+      139,
+      175
+    ],
+    "upper": [
+      115,
+      255,
+      255
+    ]
+  },
+  "white_threshold": 225,
+  "hook_white_threshold": 195,
+  "control": {
+    "smoothing": 0.45,
+    "zone_smoothing": 0.65,
+    "hook_smoothing": 0.0,
+    "min_blue_pixels": 30,
+    "min_white_pixels": 5,
+    "capture_fps": 30,
+    "bar_strip_ratio": 1.0,
+    "hook_area_min": 8,
+    "hook_area_max": 500,
+    "inactive_frames_to_end": 60,
+    "track_grace_frames": 35,
+    "debug_overlay": true,
+    "control_deadband_px": 4,
+    "max_hook_jump_px": 35,
+    "hook_search_radius_px": 80,
+    "lost_grace_frames": 35,
+    "expected_zone_width_px": 220,
+    "min_zone_width_px": 60,
+    "max_zone_jump_px": 28,
+    "hook_band_top_ratio": 0.54,
+    "hook_band_bottom_ratio": 0.66,
+    "hook_search_margin_ratio": 0,
+    "hook_search_min_height_ratio": 0.09,
+    "max_hook_band_pixels": 130,
+    "hook_max_width_px": 34,
+    "hook_max_height_px": 55,
+    "hook_min_aspect": 0.45,
+    "hook_max_aspect": 4.0,
+    "hook_shape_min_height_px": 8,
+    "hook_shape_max_width_px": 34,
+    "hook_shape_min_span_ratio": 0.22,
+    "hook_noise_open_px": 3,
+    "hook_v_min": 210,
+    "hook_s_max": 65,
+    "hook_shirt_merge_width": 26,
+    "bar_margin_left_px": 40,
+    "bar_margin_right_px": 55
+  },
+  "hotkeys": {
+    "toggle_bot": "f6",
+    "quit": "f9"
+  },
+  "automation": {
+    "enabled": true,
+    "start_keys": [
+      "1",
+      "2",
+      "3"
+    ],
+    "rod_detect_timeout_sec": 4,
+    "rod_retry_gap_sec": 0.8,
+    "rod_all_failed_delay_sec": 5,
+    "restart_delay_min_sec": 7,
+    "restart_delay_max_sec": 9,
+    "initial_delay_sec": 1,
+    "anti_afk_enabled": true,
+    "anti_afk_key": "w",
+    "anti_afk_hold_ms": 200,
+    "anti_afk_every_n_minigames": 10
+  }
+}

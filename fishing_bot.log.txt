@@ -1,0 +1,352 @@
+
+=== sessao 2026-07-05 16:46:46 ===
+
+
+Bot de pesca automatica para minigame estilo barra horizontal.
+
+
+
+Controles:
+
+  F6  - liga/desliga o bot
+
+  F9  - encerra o programa
+
+
+
+Automacao:
+
+  - Alterna teclas 1/2/3 (varas no atalho) ate o minigame iniciar
+
+  - A cada 10 minigames, tecla 'w' (anti-afk) antes de reiniciar
+
+
+
+Requisitos:
+
+  - GTA/FiveM em borderless ou janela (nao fullscreen exclusivo)
+
+  - Resolucao 2560x1440 (ajuste config.json se diferente)
+
+  - Rode calibrate.py antes para alinhar a ROI
+
+  - Deixe o jogo em foco (janela ativa) ao usar F6
+[bot] Varas nos atalhos: ['1', '2', '3']. Pressione F6 para ligar.
+[bot] Log em arquivo: C:\Users\daniel\gta-fishing-bot\fishing_bot.log.txt
+[status] enabled=False active=False awaiting=False rod=1 action=idle error=- holding=False azul_px=0 branco_px=0
+[bot] LIGADO
+[auto] Inicio de pesca agendado em 1.0s (bot ligado)
+[auto] >>> START: tecla '1' (slot 1/3)
+[status] enabled=True active=False awaiting=True rod=1 action=idle error=- holding=False azul_px=0 branco_px=0
+[auto] Minigame iniciou com tecla '1'
+[bot] Minigame detectado.
+[acao] chase-left | erro=-153.5 | anzol=481.0 zona=[519.0,750.0] w=231.0 | holding=False
+[status] enabled=True active=False awaiting=False rod=1 action=chase-left error=-139.5 holding=False azul_px=8027 branco_px=0
+[acao] track-right | erro=-80.5 | anzol=496.0 zona=[461.0,692.0] w=231.0 | holding=False
+[acao] chase-left | erro=-126.5 | anzol=495.0 zona=[506.0,737.0] w=231.0 | holding=False
+[acao] track-right | erro=-85.5 | anzol=487.0 zona=[457.0,688.0] w=231.0 | holding=False
+[acao] track-left | erro=8.5 | anzol=525.0 zona=[401.0,632.0] w=231.0 | holding=True
+[acao] track-right | erro=-13.5 | anzol=559.0 zona=[457.0,688.0] w=231.0 | holding=False
+[acao] center | erro=-2.5 | anzol=570.0 zona=[457.0,688.0] w=231.0 | holding=False
+[acao] track-right | erro=-25.5 | anzol=575.0 zona=[485.0,716.0] w=231.0 | holding=False
+[acao] track-left | erro=8.5 | anzol=581.0 zona=[457.0,688.0] w=231.0 | holding=True
+[acao] track-right | erro=-17.5 | anzol=639.0 zona=[541.0,772.0] w=231.0 | holding=False
+[acao] center | erro=-3.5 | anzol=653.0 zona=[541.0,772.0] w=231.0 | holding=False
+[acao] track-left | erro=6.5 | anzol=663.0 zona=[541.0,772.0] w=231.0 | holding=True
+[acao] track-right | erro=-10.9 | anzol=722.0 zona=[609.7,856.0] w=242.9 | holding=False
+[acao] track-left | erro=12.3 | anzol=746.0 zona=[611.4,856.0] w=248.3 | holding=True
+[acao] track-right | erro=-5.7 | anzol=778.0 zona=[655.5,912.0] w=253.8 | holding=False
+[acao] track-left | erro=9.1 | anzol=794.0 zona=[657.8,912.0] w=256.2 | holding=True
+[status] enabled=True active=False awaiting=False rod=1 action=track-left error=16.0 holding=True azul_px=7054 branco_px=142
+[acao] center | erro=0.0 | anzol=817.0 zona=[686.0,948.0] w=262.0 | holding=False
+[acao] track-left | erro=7.0 | anzol=824.0 zona=[686.0,948.0] w=262.0 | holding=True
+[acao] track-right | erro=-5.0 | anzol=812.0 zona=[686.0,948.0] w=262.0 | holding=False
+[acao] center | erro=2.8 | anzol=795.0 zona=[664.5,920.0] w=257.8 | holding=False
+[acao] track-left | erro=21.5 | anzol=789.0 zona=[643.0,892.0] w=252.1 | holding=True
+[acao] center | erro=-2.4 | anzol=763.0 zona=[638.8,892.0] w=249.9 | holding=False
+[acao] track-right | erro=-34.2 | anzol=757.0 zona=[662.4,920.0] w=254.9 | holding=False
+[acao] track-left | erro=14.4 | anzol=729.0 zona=[593.2,836.0] w=245.6 | holding=True
+[acao] track-right | erro=-16.8 | anzol=700.0 zona=[601.0,832.6] w=232.0 | holding=False
+[acao] center | erro=-3.5 | anzol=657.0 zona=[544.3,776.6] w=233.0 | holding=False
+[acao] track-left | erro=15.5 | anzol=651.0 zona=[520.0,751.0] w=231.7 | holding=True
+[acao] track-right | erro=-23.5 | anzol=640.0 zona=[548.0,779.0] w=231.1 | holding=False
+[acao] center | erro=-1.5 | anzol=634.0 zona=[520.0,751.0] w=231.0 | holding=False
+[acao] track-right | erro=-7.5 | anzol=628.0 zona=[520.0,751.0] w=231.0 | holding=False
+[acao] track-left | erro=9.5 | anzol=617.0 zona=[492.0,723.0] w=231.0 | holding=True
+[acao] track-right | erro=-8.5 | anzol=599.0 zona=[492.0,723.0] w=231.0 | holding=False
+[acao] track-left | erro=11.5 | anzol=563.0 zona=[436.0,667.0] w=231.0 | holding=True
+[acao] track-right | erro=-26.0 | anzol=549.0 zona=[454.9,695.0] w=236.9 | holding=False
+[acao] track-left | erro=8.9 | anzol=532.0 zona=[407.3,639.0] w=232.4 | holding=True
+[acao] track-right | erro=-28.9 | anzol=522.0 zona=[435.3,666.6] w=231.5 | holding=False
+[acao] center | erro=3.6 | anzol=498.0 zona=[378.3,610.6] w=232.8 | holding=False
+[acao] track-left | erro=28.2 | anzol=495.0 zona=[351.0,582.6] w=232.0 | holding=True
+[acao] track-right | erro=-10.6 | anzol=484.0 zona=[379.0,610.2] w=231.3 | holding=False
+[acao] track-left | erro=9.3 | anzol=476.0 zona=[351.1,582.2] w=231.1 | holding=True
+[status] enabled=True active=True awaiting=False rod=1 action=track-left error=5.3 holding=True azul_px=8205 branco_px=160
+[acao] track-right | erro=-27.7 | anzol=467.0 zona=[379.1,610.2] w=231.0 | holding=False
+[acao] center | erro=-2.0 | anzol=408.0 zona=[293.8,526.2] w=233.0 | holding=False
+[acao] track-left | erro=19.3 | anzol=402.0 zona=[267.2,498.2] w=231.7 | holding=True
+[acao] track-right | erro=-6.4 | anzol=399.0 zona=[284.6,526.2] w=237.8 | holding=False
+[status] enabled=True active=False awaiting=False rod=1 action=track-right error=-6.4 holding=False azul_px=0 branco_px=0
+[acao] pause | erro=-6.4 | anzol=- zona=[-,-] w=- | holding=False
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=-6.4 holding=False azul_px=0 branco_px=0
+[bot] Minigame finalizado (#1).
+[auto] Inicio de pesca agendado em 8.9s (minigame finalizado)
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=0
+[auto] >>> START: tecla '1' (slot 1/3)
+[status] enabled=True active=False awaiting=True rod=1 action=pause error=- holding=False azul_px=0 branco_px=0
+[auto] Minigame iniciou com tecla '1'
+[bot] Minigame detectado.
+[acao] chase-left | erro=-430.0 | anzol=283.0 zona=[574.0,852.0] w=278.0 | holding=False
+[acao] center | erro=0.0 | anzol=487.0 zona=[364.2,609.8] w=253.1 | holding=False
+[acao] track-left | erro=8.0 | anzol=495.0 zona=[364.2,609.8] w=248.2 | holding=True
+[acao] chase-left | erro=-138.5 | anzol=496.0 zona=[519.0,750.0] w=243.9 | holding=False
+[acao] track-right | erro=-86.5 | anzol=486.0 zona=[457.0,688.0] w=232.1 | holding=False
+[acao] track-left | erro=23.5 | anzol=539.0 zona=[399.1,632.0] w=236.4 | holding=True
+[acao] track-right | erro=-15.6 | anzol=611.0 zona=[511.1,742.1] w=231.0 | holding=False
+[acao] track-left | erro=28.4 | anzol=627.0 zona=[483.1,714.1] w=231.0 | holding=True
+[acao] track-right | erro=-9.5 | anzol=675.0 zona=[569.0,800.0] w=231.0 | holding=False
+[acao] center | erro=0.5 | anzol=685.0 zona=[569.0,800.0] w=231.0 | holding=False
+[acao] track-left | erro=6.5 | anzol=691.0 zona=[569.0,800.0] w=231.0 | holding=True
+[acao] track-right | erro=-12.1 | anzol=720.0 zona=[608.2,856.0] w=244.0 | holding=False
+[acao] track-left | erro=8.4 | anzol=742.0 zona=[611.2,856.0] w=248.5 | holding=True
+[acao] track-right | erro=-11.4 | anzol=773.0 zona=[656.7,912.0] w=252.4 | holding=False
+[acao] track-left | erro=5.6 | anzol=790.0 zona=[656.8,912.0] w=257.2 | holding=True
+[acao] center | erro=-0.1 | anzol=805.0 zona=[670.2,940.0] w=265.8 | holding=False
+[acao] track-left | erro=8.9 | anzol=814.0 zona=[670.2,940.0] w=268.4 | holding=True
+[status] enabled=True active=True awaiting=False rod=1 action=track-left error=114.9 holding=True azul_px=7036 branco_px=134
+[acao] center | erro=-3.5 | anzol=813.0 zona=[686.0,947.0] w=261.0 | holding=False
+[acao] track-right | erro=-9.5 | anzol=807.0 zona=[686.0,947.0] w=261.0 | holding=False
+[acao] track-left | erro=5.3 | anzol=797.0 zona=[664.3,919.0] w=256.9 | holding=True
+[acao] track-right | erro=-29.1 | anzol=782.0 zona=[675.3,947.0] w=267.5 | holding=False
+[acao] center | erro=-2.7 | anzol=761.0 zona=[636.4,891.0] w=258.6 | holding=False
+[acao] track-left | erro=16.0 | anzol=756.0 zona=[617.0,863.0] w=250.4 | holding=True
+[acao] track-right | erro=-6.5 | anzol=733.0 zona=[616.0,863.0] w=243.8 | holding=False
+[acao] track-left | erro=12.9 | anzol=702.0 zona=[571.3,807.0] w=238.1 | holding=True
+[acao] track-right | erro=-10.5 | anzol=681.0 zona=[576.0,807.0] w=231.2 | holding=False
+[acao] track-left | erro=14.5 | anzol=650.0 zona=[520.0,751.0] w=232.7 | holding=True
+[acao] track-right | erro=-21.5 | anzol=670.0 zona=[576.0,807.0] w=231.0 | holding=False
+[acao] center | erro=-2.0 | anzol=686.0 zona=[569.0,807.0] w=238.8 | holding=False
+[acao] track-left | erro=29.3 | anzol=691.0 zona=[544.5,779.0] w=236.0 | holding=True
+[acao] track-right | erro=-13.0 | anzol=726.0 zona=[615.0,863.0] w=244.1 | holding=False
+[acao] track-left | erro=6.1 | anzol=746.0 zona=[616.8,863.0] w=249.8 | holding=True
+[acao] track-right | erro=-16.6 | anzol=773.0 zona=[660.2,919.0] w=256.3 | holding=False
+[acao] center | erro=-2.5 | anzol=788.0 zona=[662.1,919.0] w=259.0 | holding=False
+[acao] track-left | erro=32.0 | anzol=798.0 zona=[641.0,891.0] w=252.7 | holding=True
+[status] enabled=True active=False awaiting=False rod=1 action=track-left error=76.5 holding=True azul_px=7007 branco_px=156
+[acao] center | erro=-3.5 | anzol=813.0 zona=[686.0,947.0] w=261.0 | holding=False
+[acao] track-right | erro=-10.5 | anzol=806.0 zona=[686.0,947.0] w=261.0 | holding=False
+[acao] center | erro=3.3 | anzol=795.0 zona=[664.3,919.0] w=256.9 | holding=False
+[acao] track-left | erro=22.2 | anzol=789.0 zona=[642.6,891.0] w=251.4 | holding=True
+[acao] track-right | erro=-16.1 | anzol=774.0 zona=[661.1,919.0] w=255.2 | holding=False
+[acao] track-left | erro=6.8 | anzol=797.0 zona=[661.4,919.0] w=260.0 | holding=True
+[status] enabled=True active=False awaiting=False rod=1 action=track-left error=55.9 holding=True azul_px=0 branco_px=0
+[acao] hold-pause | erro=55.9 | anzol=- zona=[-,-] w=- | holding=True
+[status] enabled=True active=False awaiting=False rod=1 action=hold-pause error=55.9 holding=True azul_px=0 branco_px=0
+[bot] Minigame finalizado (#2).
+[auto] Inicio de pesca agendado em 7.8s (minigame finalizado)
+[status] enabled=True active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[auto] >>> START: tecla '1' (slot 1/3)
+[status] enabled=True active=False awaiting=True rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[bot] Minigame detectado.
+[acao] chase-left | erro=-154.0 | anzol=481.5 zona=[520.0,751.0] w=231.0 | holding=False
+[acao] track-right | erro=-80.5 | anzol=496.0 zona=[461.0,692.0] w=231.0 | holding=False
+[acao] chase-left | erro=-134.5 | anzol=495.0 zona=[514.0,745.0] w=231.0 | holding=False
+[acao] track-right | erro=-82.5 | anzol=490.0 zona=[457.0,688.0] w=231.0 | holding=False
+[acao] track-left | erro=14.1 | anzol=530.0 zona=[399.9,632.0] w=233.9 | holding=True
+[acao] center | erro=-1.4 | anzol=570.0 zona=[455.9,686.9] w=231.3 | holding=False
+[acao] track-right | erro=-24.4 | anzol=575.0 zona=[483.9,714.9] w=231.1 | holding=False
+[acao] track-left | erro=7.5 | anzol=580.0 zona=[457.0,688.0] w=231.0 | holding=True
+[acao] track-right | erro=-10.5 | anzol=618.0 zona=[513.0,744.0] w=231.0 | holding=False
+[acao] center | erro=-0.5 | anzol=628.0 zona=[513.0,744.0] w=231.0 | holding=False
+[acao] track-left | erro=33.5 | anzol=634.0 zona=[485.0,716.0] w=231.0 | holding=True
+[acao] center | erro=-2.5 | anzol=682.0 zona=[569.0,800.0] w=231.0 | holding=False
+[acao] track-left | erro=7.5 | anzol=692.0 zona=[569.0,800.0] w=231.0 | holding=True
+[acao] track-right | erro=-16.9 | anzol=716.0 zona=[609.7,856.0] w=242.9 | holding=False
+[acao] track-left | erro=4.5 | anzol=738.0 zona=[611.1,856.0] w=248.7 | holding=True
+[acao] track-right | erro=-19.8 | anzol=764.0 zona=[655.5,912.0] w=253.8 | holding=False
+[acao] center | erro=-3.4 | anzol=780.0 zona=[654.8,912.0] w=259.3 | holding=False
+[acao] track-left | erro=26.9 | anzol=786.0 zona=[634.3,884.0] w=253.1 | holding=True
+[status] enabled=True active=True awaiting=False rod=1 action=track-left error=82.3 holding=True azul_px=7005 branco_px=160
+[acao] center | erro=0.0 | anzol=817.0 zona=[686.0,948.0] w=262.0 | holding=False
+[acao] track-right | erro=-6.0 | anzol=811.0 zona=[686.0,948.0] w=262.0 | holding=False
+[acao] track-left | erro=14.8 | anzol=807.0 zona=[664.5,920.0] w=257.8 | holding=True
+[acao] track-right | erro=-20.5 | anzol=795.0 zona=[684.5,946.5] w=261.2 | holding=False
+[acao] track-left | erro=15.9 | anzol=782.0 zona=[641.6,890.5] w=252.0 | holding=True
+[acao] track-right | erro=-24.8 | anzol=765.0 zona=[661.0,918.5] w=254.8 | holding=False
+[acao] track-left | erro=14.8 | anzol=729.0 zona=[593.8,834.5] w=243.2 | holding=True
+[acao] track-right | erro=-9.6 | anzol=705.0 zona=[597.1,832.2] w=236.0 | holding=False
+[acao] track-left | erro=17.8 | anzol=676.0 zona=[542.6,773.8] w=231.3 | holding=True
+[acao] track-right | erro=-8.5 | anzol=655.0 zona=[548.0,779.0] w=231.0 | holding=False
+[acao] center | erro=-0.5 | anzol=607.0 zona=[492.0,723.0] w=231.0 | holding=False
+[acao] track-left | erro=21.5 | anzol=601.0 zona=[464.0,695.0] w=231.0 | holding=True
+[acao] track-right | erro=-32.5 | anzol=575.0 zona=[492.0,723.0] w=231.0 | holding=False
+[acao] center | erro=-1.3 | anzol=522.0 zona=[407.6,639.0] w=232.3 | holding=False
+[acao] track-right | erro=-7.3 | anzol=516.0 zona=[407.6,639.0] w=231.7 | holding=False
+[acao] center | erro=-3.2 | anzol=492.0 zona=[379.7,610.7] w=231.1 | holding=False
+[acao] track-left | erro=18.8 | anzol=486.0 zona=[351.7,582.7] w=231.0 | holding=True
+[acao] track-right | erro=-30.2 | anzol=465.0 zona=[379.7,610.7] w=231.0 | holding=False
+[status] enabled=True active=True awaiting=False rod=1 action=track-right error=-45.7 holding=False azul_px=7901 branco_px=160
+[acao] center | erro=-2.7 | anzol=408.0 zona=[294.7,526.7] w=232.5 | holding=False
+[acao] track-left | erro=18.8 | anzol=402.0 zona=[267.7,498.7] w=231.6 | holding=True
+[acao] track-right | erro=-27.2 | anzol=384.0 zona=[295.7,526.7] w=231.0 | holding=False
+[acao] center | erro=3.2 | anzol=330.0 zona=[210.9,442.7] w=233.6 | holding=False
+[acao] track-right | erro=-30.6 | anzol=324.0 zona=[238.9,470.3] w=232.2 | holding=False
+[acao] track-left | erro=7.2 | anzol=306.0 zona=[183.2,414.3] w=231.1 | holding=True
+[acao] track-right | erro=-10.8 | anzol=288.0 zona=[183.3,414.3] w=231.0 | holding=False
+[acao] track-left | erro=15.2 | anzol=230.0 zona=[99.3,330.3] w=231.0 | holding=True
+[acao] track-right | erro=-11.2 | anzol=206.0 zona=[98.5,336.0] w=235.3 | holding=False
+[acao] center | erro=3.5 | anzol=218.0 zona=[97.4,331.7] w=235.8 | holding=False
+[acao] track-left | erro=31.5 | anzol=224.0 zona=[77.0,308.0] w=232.7 | holding=True
+[acao] track-right | erro=-8.5 | anzol=296.0 zona=[189.0,420.0] w=231.0 | holding=False
+[acao] center | erro=-1.5 | anzol=303.0 zona=[189.0,420.0] w=231.0 | holding=False
+[acao] track-left | erro=4.5 | anzol=309.0 zona=[189.0,420.0] w=231.0 | holding=True
+[acao] track-right | erro=-8.5 | anzol=324.0 zona=[217.0,448.0] w=231.0 | holding=False
+[acao] center | erro=-2.5 | anzol=330.0 zona=[217.0,448.0] w=231.0 | holding=False
+[status] enabled=True active=False awaiting=False rod=1 action=center error=3.5 holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=center error=3.5 holding=False azul_px=0 branco_px=0
+[acao] pause | erro=3.5 | anzol=- zona=[-,-] w=- | holding=False
+[bot] Minigame finalizado (#3).
+[auto] Inicio de pesca agendado em 8.0s (minigame finalizado)
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=383
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=740
+[status] enabled=True active=False awaiting=False rod=1 action=pause error=- holding=False azul_px=0 branco_px=1076
+[auto] >>> START: tecla '1' (slot 1/3)
+[status] enabled=True active=False awaiting=True rod=1 action=pause error=- holding=False azul_px=0 branco_px=1426
+[bot] Minigame detectado.
+[acao] chase-left | erro=-154.0 | anzol=481.5 zona=[520.0,751.0] w=231.0 | holding=False
+[acao] track-right | erro=-106.5 | anzol=470.0 zona=[461.0,692.0] w=231.0 | holding=False
+[acao] chase-left | erro=-159.5 | anzol=470.0 zona=[514.0,745.0] w=231.0 | holding=False
+[acao] track-right | erro=-85.5 | anzol=487.0 zona=[457.0,688.0] w=231.0 | holding=False
+[acao] track-left | erro=11.1 | anzol=527.0 zona=[399.9,632.0] w=233.9 | holding=True
+[acao] track-right | erro=-9.4 | anzol=562.0 zona=[455.9,686.9] w=231.3 | holding=False
+[acao] track-left | erro=6.6 | anzol=578.0 zona=[455.9,686.9] w=231.0 | holding=True
+[acao] center | erro=-1.4 | anzol=626.0 zona=[511.9,742.9] w=231.0 | holding=False
+[acao] track-right | erro=-18.4 | anzol=637.0 zona=[539.9,770.9] w=231.0 | holding=False
+[acao] track-left | erro=17.6 | anzol=645.0 zona=[511.9,742.9] w=231.0 | holding=True
+[acao] track-right | erro=-4.4 | anzol=703.0 zona=[587.8,826.9] w=236.2 | holding=False
+[acao] track-left | erro=5.2 | anzol=714.0 zona=[590.8,826.9] w=238.6 | holding=True
+[acao] track-right | erro=-7.5 | anzol=725.0 zona=[610.0,854.9] w=242.1 | holding=False
+[acao] center | erro=2.4 | anzol=735.0 zona=[610.3,854.9] w=246.4 | holding=False
+[acao] track-left | erro=31.8 | anzol=741.0 zona=[591.6,826.9] w=239.2 | holding=True
+[acao] track-right | erro=-16.3 | anzol=767.0 zona=[655.8,910.9] w=252.2 | holding=False
+[acao] center | erro=-0.8 | anzol=780.0 zona=[650.7,910.9] w=261.1 | holding=False
+[acao] track-left | erro=29.0 | anzol=786.0 zona=[631.1,882.9] w=255.0 | holding=True
+[status] enabled=True active=True awaiting=False rod=1 action=track-left error=46.7 holding=True azul_px=7054 branco_px=142
+[acao] center | erro=0.0 | anzol=817.0 zona=[686.0,948.0] w=262.0 | holding=False
+[acao] track-left | erro=15.8 | anzol=808.0 zona=[664.5,920.0] w=257.8 | holding=True
+[acao] track-right | erro=-19.0 | anzol=798.0 zona=[686.0,948.0] w=260.6 | holding=False
+[acao] track-left | erro=16.5 | anzol=784.0 zona=[643.0,892.0] w=252.1 | holding=True
+[acao] track-right | erro=-24.2 | anzol=767.0 zona=[662.4,920.0] w=254.9 | holding=False
+[acao] track-left | erro=8.4 | anzol=750.0 zona=[619.2,864.0] w=248.7 | holding=True
+[acao] track-right | erro=-16.2 | anzol=731.0 zona=[624.4,870.0] w=242.7 | holding=False
+[acao] track-left | erro=15.6 | anzol=711.0 zona=[576.7,814.0] w=239.8 | holding=True
+[acao] track-right | erro=-23.7 | anzol=700.0 zona=[607.5,839.9] w=233.1 | holding=False
+[acao] center | erro=-1.5 | anzol=697.0 zona=[583.0,814.0] w=231.7 | holding=False
+[acao] track-right | erro=-5.5 | anzol=693.0 zona=[583.0,814.0] w=231.3 | holding=False
+[acao] track-left | erro=19.5 | anzol=690.0 zona=[555.0,786.0] w=231.1 | holding=True
+[acao] track-right | erro=-18.5 | anzol=680.0 zona=[583.0,814.0] w=231.0 | holding=False
+[acao] center | erro=-0.5 | anzol=670.0 zona=[555.0,786.0] w=231.0 | holding=False
+[acao] track-left | erro=23.5 | anzol=666.0 zona=[527.0,758.0] w=231.0 | holding=True
+[acao] track-right | erro=-14.5 | anzol=656.0 zona=[555.0,786.0] w=231.0 | holding=False
+[acao] center | erro=1.5 | anzol=644.0 zona=[527.0,758.0] w=231.0 | holding=False
+[acao] track-right | erro=-30.5 | anzol=640.0 zona=[555.0,786.0] w=231.0 | holding=False
+[acao] track-left | erro=12.5 | anzol=627.0 zona=[499.0,730.0] w=231.0 | holding=True
+[acao] center | erro=-1.5 | anzol=613.0 zona=[499.0,730.0] w=231.0 | holding=False
+[acao] track-right | erro=-4.5 | anzol=610.0 zona=[499.0,730.0] w=231.0 | holding=False
+[acao] track-left | erro=16.5 | anzol=603.0 zona=[471.0,702.0] w=231.0 | holding=True
+[acao] track-right | erro=-18.5 | anzol=596.0 zona=[499.0,730.0] w=231.0 | holding=False
+[status] enabled=True active=True awaiting=False rod=1 action=track-right error=-18.5 holding=False azul_px=8053 branco_px=160
+[acao] center | erro=2.5 | anzol=589.0 zona=[471.0,702.0] w=231.0 | holding=False
+[acao] track-right | erro=-4.5 | anzol=582.0 zona=[471.0,702.0] w=231.0 | holding=False
+[acao] track-left | erro=6.5 | anzol=565.0 zona=[443.0,674.0] w=231.0 | holding=True
+[acao] track-right | erro=-14.5 | anzol=550.0 zona=[449.0,680.0] w=231.0 | holding=False
+[acao] center | erro=2.5 | anzol=539.0 zona=[421.0,652.0] w=231.0 | holding=False
+[acao] track-left | erro=24.5 | anzol=533.0 zona=[393.0,624.0] w=231.0 | holding=True
+[acao] track-right | erro=-22.5 | anzol=514.0 zona=[421.0,652.0] w=231.0 | holding=False
+[acao] center | erro=3.5 | anzol=456.0 zona=[337.0,568.0] w=231.4 | holding=False
+[acao] track-right | erro=-31.5 | anzol=449.0 zona=[365.0,596.0] w=231.1 | holding=False
+[acao] track-left | erro=5.5 | anzol=430.0 zona=[309.0,540.0] w=231.0 | holding=True
+[acao] track-right | erro=-7.5 | anzol=417.0 zona=[309.0,540.0] w=231.0 | holding=False
+[acao] track-left | erro=4.5 | anzol=401.0 zona=[281.0,512.0] w=231.0 | holding=True
+[acao] center | erro=-1.5 | anzol=395.0 zona=[281.0,512.0] w=231.0 | holding=False
+[acao] track-right | erro=-36.5 | anzol=388.0 zona=[309.0,540.0] w=231.0 | holding=False
+[acao] center | erro=2.5 | anzol=343.0 zona=[225.0,456.0] w=231.0 | holding=False
+[acao] track-right | erro=-10.5 | anzol=330.0 zona=[225.0,456.0] w=231.0 | holding=False
+[acao] center | erro=-1.5 | anzol=311.0 zona=[197.0,428.0] w=231.0 | holding=False
+[acao] track-left | erro=20.5 | anzol=305.0 zona=[169.0,400.0] w=231.0 | holding=True
+[acao] track-right | erro=-5.5 | anzol=279.0 zona=[169.0,400.0] w=231.0 | holding=False
+[acao] track-left | erro=17.5 | anzol=218.0 zona=[85.0,316.0] w=231.0 | holding=True
+[status] enabled=True active=False awaiting=False rod=1 action=track-left error=1.5 holding=True azul_px=0 branco_px=0
+[acao] hold-pause | erro=1.5 | anzol=- zona=[-,-] w=- | holding=True
+[status] enabled=True active=False awaiting=False rod=1 action=hold-pause error=1.5 holding=True azul_px=0 branco_px=0
+[bot] Minigame finalizado (#4).
+[auto] Inicio de pesca agendado em 9.0s (minigame finalizado)
+[status] enabled=True active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=True active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[bot] DESLIGADO
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
+[status] enabled=False active=False awaiting=False rod=1 action=hold-pause error=- holding=False azul_px=0 branco_px=0
