@@ -80,8 +80,11 @@
     "restart_delay_max_sec": 9,
     "initial_delay_sec": 1,
     "anti_afk_enabled": true,
-    "anti_afk_key": "w",
-    "anti_afk_hold_ms": 200,
+    "anti_afk_keys": [
+      "s",
+      "w"
+    ],
+    "anti_afk_hold_ms": 400,
     "anti_afk_every_n_minigames": 10
   }
 }
