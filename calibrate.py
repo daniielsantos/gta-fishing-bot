@@ -130,7 +130,9 @@ def main() -> None:
                 zone_right = detector._blue_right
             zone_x = result.x_blue if result.x_blue is not None else detector._x_blue
             if result.blue_left_control is not None and result.blue_right_control is not None:
-                zone_x = (result.blue_left_control + result.blue_right_control) / 2.0
+                zone_x = result.zone_center_control
+                if zone_x is None:
+                    zone_x = (result.blue_left_control + result.blue_right_control) / 2.0
             elif result.blue_left is not None and result.blue_right is not None:
                 zone_x = (result.blue_left + result.blue_right) / 2.0
             if zone_x is None and zone_left is not None and zone_right is not None:
@@ -143,13 +145,32 @@ def main() -> None:
                 and zone_left is not None
                 and zone_right is not None
             ):
-                error_text = f"{hook_x - (zone_left + zone_right) / 2.0:.1f}"
+                center = result.zone_center_control
+                if center is None:
+                    center = (zone_left + zone_right) / 2.0
+                error_text = f"{hook_x - center:.1f}"
 
             cv2.rectangle(debug, (0, 0), (debug.shape[1] - 1, debug.shape[0] - 1), (0, 255, 0), 2)
             bar_top = 0
             if debug.shape[0] > 100:
                 bar_top = int(debug.shape[0] * (1.0 - detector.bar_strip_ratio))
-            detector.draw_zone_overlay(debug, zone_left, zone_right, bar_top)
+            vis_left = result.blue_left_vision
+            vis_right = result.blue_right_vision
+            vis_center = result.zone_center_vision
+            if vis_left is None or vis_right is None:
+                vis_left, vis_right = detector.peek_zone_bounds(frame)
+                vis_center = None
+            ctrl_center = result.zone_center_control
+            if ctrl_center is None and zone_left is not None and zone_right is not None:
+                ctrl_center = (zone_left + zone_right) / 2.0
+            if zone_x is None and ctrl_center is not None:
+                zone_x = ctrl_center
+            detector.draw_vision_zone_overlay(
+                debug, vis_left, vis_right, bar_top, center=vis_center
+            )
+            detector.draw_zone_overlay(
+                debug, zone_left, zone_right, bar_top, center=ctrl_center
+            )
             if hook_x is not None:
                 cv2.line(debug, (int(hook_x), 0), (int(hook_x), debug.shape[0] - 1), (255, 255, 255), 2)
 
@@ -158,7 +179,7 @@ def main() -> None:
                 f"anzol={hook_text} zona={blue_text} erro={error_text}",
                 f"fps~{fps_ema:.0f} (calibracao limitada pelo OpenCV)",
                 f"faixa amarela = altura do anzol (t/g/h/b)",
-                f"vermelho = cuidado bordas | azul grosso = centro da zona",
+                f"vermelho = cuidado bordas | verde = visao | ciano = controle",
                 "Hook Mask = faixa de busca | S= salvar",
             ]
             for idx, line in enumerate(lines):

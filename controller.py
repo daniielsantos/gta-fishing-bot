@@ -46,7 +46,7 @@ def _send_mouse_button(flags: int) -> None:
 class MouseController:
     """Segura mouse -> zona direita. Solta -> zona esquerda."""
 
-    def __init__(self, deadband_px: float = 4.0) -> None:
+    def __init__(self, deadband_px: float = 12.0) -> None:
         self.deadband_px = deadband_px
         self._holding = False
 
@@ -95,11 +95,5 @@ class MouseController:
         if error < -db:
             self.release()
             return "track-right"
-
-        if self._holding:
-            if error <= 0:
-                self.release()
-                return "center"
-            return "track-left"
 
         return "center"

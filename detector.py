@@ -21,6 +21,10 @@ class DetectionResult:
     blue_left_control: float | None = None
     blue_right_control: float | None = None
     error_control: float | None = None
+    blue_left_vision: float | None = None
+    blue_right_vision: float | None = None
+    zone_center_control: float | None = None
+    zone_center_vision: float | None = None
 
 
 class FishingDetector:
@@ -117,6 +121,10 @@ class FishingDetector:
         self._ctrl_blue_right: float | None = None
         self._ctrl_error: float | None = None
         self._hook_stale_frames = 0
+        self._vision_blue_left: float | None = None
+        self._vision_blue_right: float | None = None
+        self._zone_center_control: float | None = None
+        self._zone_center_vision: float | None = None
 
     def reset(self) -> None:
         self._x_hook = None
@@ -132,6 +140,10 @@ class FishingDetector:
         self._ctrl_blue_right = None
         self._ctrl_error = None
         self._hook_stale_frames = 0
+        self._vision_blue_left = None
+        self._vision_blue_right = None
+        self._zone_center_control = None
+        self._zone_center_vision = None
 
     def _smooth(self, previous: float | None, current: float | None, factor: float) -> float | None:
         if current is None:
@@ -209,11 +221,77 @@ class FishingDetector:
     def _blue_mask_for_zone(self, bar_bgr: np.ndarray) -> np.ndarray:
         """Mascara azul com fechamento horizontal — une gaps das setas <- ->."""
         mask = self._blue_mask(bar_bgr)
-        close_k = cv2.getStructuringElement(cv2.MORPH_RECT, (29, 5))
+        close_k = cv2.getStructuringElement(cv2.MORPH_RECT, (35, 5))
         mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, close_k)
-        dilate_k = cv2.getStructuringElement(cv2.MORPH_RECT, (13, 3))
+        dilate_k = cv2.getStructuringElement(cv2.MORPH_RECT, (17, 3))
         mask = cv2.dilate(mask, dilate_k, iterations=1)
         return mask
+
+    def _extend_zone_edges(
+        self,
+        blue_mask: np.ndarray,
+        left: float,
+        right: float,
+        max_extend_px: float = 12.0,
+    ) -> tuple[float, float]:
+        """Estende bordas L/R com limite — evita over-shoot por dilatacao da mascara."""
+        height, width = blue_mask.shape[:2]
+        if width <= 0 or height <= 0:
+            return left, right
+
+        y0 = int(height * 0.28)
+        y1 = max(y0 + 1, int(height * 0.94))
+        strip = blue_mask[y0:y1, :]
+        col_counts = np.count_nonzero(strip, axis=0).astype(np.float64)
+        if col_counts.max() < 1.5:
+            return left, right
+
+        row_span = max(1, strip.shape[0])
+        edge_thr = max(1.0, row_span * 0.035)
+        edge_thr_right = edge_thr * 1.4
+
+        orig_l = int(left)
+        orig_r = max(orig_l, int(round(right)) - 1)
+        l = orig_l
+        r = min(width - 1, orig_r)
+        cap = max(4.0, float(max_extend_px))
+
+        while l > 0 and (orig_l - l) < cap and col_counts[l - 1] >= edge_thr:
+            l -= 1
+        while r < width - 1 and (r - orig_r) < cap and col_counts[r + 1] >= edge_thr_right:
+            r += 1
+        return float(l), float(r + 1)
+
+    def _zone_mass_center(
+        self,
+        blue_mask: np.ndarray,
+        left: float,
+        right: float,
+    ) -> float:
+        """Centro ponderado pelo corpo azul (ignora setas <- -> nas pontas)."""
+        height, width = blue_mask.shape[:2]
+        l = max(0, int(left))
+        r = min(width, int(round(right)))
+        if r <= l + 6:
+            return (left + right) / 2.0
+
+        span = r - l
+        trim = min(18, max(8, int(span * 0.07)))
+        inner_l = l + trim
+        inner_r = r - trim
+        if inner_r <= inner_l + 10:
+            inner_l, inner_r = l, r
+
+        y0 = int(height * 0.34)
+        y1 = max(y0 + 1, int(height * 0.74))
+        strip = blue_mask[y0:y1, inner_l:inner_r]
+        col_counts = np.count_nonzero(strip, axis=0).astype(np.float64)
+        total = float(col_counts.sum())
+        if total < 4.0:
+            return (left + right) / 2.0
+
+        xs = np.arange(inner_l, inner_l + col_counts.size, dtype=np.float64)
+        return float(np.dot(xs, col_counts) / total)
 
     def _zone_bounds_from_columns(
         self,
@@ -287,17 +365,17 @@ class FishingDetector:
             return None, None, None, int(col_counts.sum())
 
         _score, run_left, run_right, strength = best
-        run_w = run_right - run_left + 1
-        if run_w > target_w * 1.2:
-            segment = col_counts[run_left : run_right + 1]
-            half = target_w // 2
-            center_idx = int(run_left + segment.argmax())
-            left = float(max(0, center_idx - half))
-            right = float(min(width, left + target_w))
-            left = max(0.0, right - target_w)
-        else:
-            left = float(run_left)
-            right = float(run_right + 1)
+        left = float(run_left)
+        right = float(run_right + 1)
+        run_w = right - left
+        if run_w > target_w * 1.12:
+            center = self._zone_mass_center(blue_mask, left, right)
+            half = target_w * 0.52
+            left = max(0.0, center - half)
+            right = min(float(width), center + half)
+            if right - left < self.min_zone_width_px:
+                left = float(run_left)
+                right = float(run_right + 1)
 
         center = (left + right) / 2.0
         return left, right, center, int(strength)
@@ -434,19 +512,31 @@ class FishingDetector:
     ) -> tuple[float | None, float | None, float | None, int]:
         bounds = self._zone_bounds_from_columns(zone_mask)
         if bounds[0] is not None:
-            return bounds
-        return self._largest_component_bounds(zone_mask, None, ignore_prev=True)
+            left, right, _center, area = bounds
+            left, right = self._extend_zone_edges(zone_mask, left, right)
+            center = self._zone_mass_center(zone_mask, left, right)
+            return left, right, center, area
+        left, right, center, area = self._largest_component_bounds(
+            zone_mask, None, ignore_prev=True
+        )
+        if left is None or right is None:
+            return left, right, center, area
+        left, right = self._extend_zone_edges(zone_mask, left, right)
+        return left, right, self._zone_mass_center(zone_mask, left, right), area
 
     def _follow_zone_measurement(
         self,
         left: float,
         right: float,
         hook_x: float | None,
+        zone_mask: np.ndarray | None = None,
     ) -> tuple[float, float, float]:
         center = (left + right) / 2.0
         prev_l = self._ctrl_blue_left if self._ctrl_blue_left is not None else self._blue_left
         prev_r = self._ctrl_blue_right if self._ctrl_blue_right is not None else self._blue_right
         if prev_l is None or prev_r is None:
+            if zone_mask is not None:
+                center = self._zone_mass_center(zone_mask, left, right)
             return left, right, center
 
         hook_outside_vision = self._zone_separated_from_hook(hook_x, left, right, margin=8.0)
@@ -456,17 +546,28 @@ class FishingDetector:
         if hook_outside_vision or hook_outside_prev:
             max_step = max(self.max_zone_jump_px * 2.5, 48.0)
             if jump > max_step * 2.0:
-                return left, right, center
+                new_left, new_right = left, right
+            else:
+                scale = max_step / jump if jump > max_step else 1.0
+                if jump <= max_step:
+                    new_left, new_right = left, right
+                else:
+                    new_left = prev_l + (left - prev_l) * scale
+                    new_right = prev_r + (right - prev_r) * scale
         else:
             max_step = float(self.max_zone_jump_px)
+            if jump <= max_step:
+                new_left, new_right = left, right
+            else:
+                scale = max_step / jump
+                new_left = prev_l + (left - prev_l) * scale
+                new_right = prev_r + (right - prev_r) * scale
 
-        if jump <= max_step:
-            return left, right, center
-
-        scale = max_step / jump
-        new_left = prev_l + (left - prev_l) * scale
-        new_right = prev_r + (right - prev_r) * scale
-        return new_left, new_right, (new_left + new_right) / 2.0
+        if zone_mask is not None:
+            center = self._zone_mass_center(zone_mask, new_left, new_right)
+        else:
+            center = (new_left + new_right) / 2.0
+        return new_left, new_right, center
 
     def _blue_zone_bounds(
         self,
@@ -483,7 +584,7 @@ class FishingDetector:
 
         self._reject_streak = 0
         follow_left, follow_right, follow_center = self._follow_zone_measurement(
-            left, right, hook_x
+            left, right, hook_x, blue_mask
         )
         return follow_left, follow_right, follow_center, area
 
@@ -925,31 +1026,6 @@ class FishingDetector:
             return raw_x
         return self._x_hook
 
-    def _pin_control_zone(
-        self,
-        left: float,
-        right: float,
-        hook_x: float | None,
-    ) -> tuple[float, float, float]:
-        center = (left + right) / 2.0
-        if (
-            hook_x is None
-            or self._ctrl_blue_left is None
-            or self._ctrl_blue_right is None
-        ):
-            return left, right, center
-
-        prev_l = self._ctrl_blue_left
-        prev_r = self._ctrl_blue_right
-        hook_inside_prev = prev_l <= hook_x <= prev_r
-        hook_inside_new = left <= hook_x <= right
-        jump = max(abs(left - prev_l), abs(right - prev_r))
-
-        if hook_inside_prev and hook_inside_new and jump < 22.0:
-            return prev_l, prev_r, (prev_l + prev_r) / 2.0
-
-        return left, right, center
-
     def _reacquire_hook_x(
         self,
         line_mask: np.ndarray,
@@ -971,35 +1047,11 @@ class FishingDetector:
         hook_x: float | None,
         bar_width: float,
         hook_trusted: bool = True,
+        zone_mask: np.ndarray | None = None,
     ) -> tuple[float, float, float]:
-        width = right - left
+        del hook_x, hook_trusted
         center = (left + right) / 2.0
-        expected = self.expected_zone_width_px
-
-        min_width = expected * 1.05
-        if self._blue_left is not None and self._blue_right is not None:
-            min_width = max(min_width, (self._blue_right - self._blue_left) * 0.92)
-
-        if width < expected * 0.88 and self._blue_left is not None and self._blue_right is not None:
-            prev_w = self._blue_right - self._blue_left
-            center = (left + right) / 2.0
-            if hook_trusted and hook_x is not None and left <= hook_x <= right:
-                center = hook_x
-            half = prev_w * 0.5
-            left = center - half
-            right = center + half
-        elif width < expected * 0.88:
-            center = hook_x if hook_trusted and hook_x is not None else center
-            half = expected * 0.55
-            left = center - half
-            right = center + half
-
-        if right - left < min_width:
-            center = (left + right) / 2.0
-            if hook_trusted and hook_x is not None and left - 15 <= hook_x <= right + 15:
-                center = hook_x
-            left = center - min_width * 0.5
-            right = center + min_width * 0.5
+        min_width = float(self.min_zone_width_px)
 
         if right > bar_width:
             overshoot = right - bar_width
@@ -1009,12 +1061,17 @@ class FishingDetector:
             right -= left
             left = 0.0
 
-        if right >= bar_width - 1 and right - left < min_width:
-            left = max(0.0, right - min_width)
+        if right - left < min_width:
+            half = min_width * 0.5
+            left = max(0.0, center - half)
+            right = min(bar_width, center + half)
+            if right - left < min_width:
+                right = min(bar_width, left + min_width)
 
-        right = min(bar_width, max(right, left + min_width * 0.55))
-        left = max(0.0, min(left, bar_width - min_width * 0.55))
-        center = (left + right) / 2.0
+        if zone_mask is not None:
+            center = self._zone_mass_center(zone_mask, left, right)
+        else:
+            center = (left + right) / 2.0
         return left, right, center
 
     def _hook_cx_from_contour(
@@ -1160,12 +1217,13 @@ class FishingDetector:
         raw_x_hook: float,
         raw_left: float,
         raw_right: float,
+        raw_center: float,
     ) -> None:
-        raw_center = (raw_left + raw_right) / 2.0
         self._ctrl_x_hook = raw_x_hook
         self._ctrl_blue_left = raw_left
         self._ctrl_blue_right = raw_right
         self._ctrl_error = raw_x_hook - raw_center
+        self._zone_center_control = raw_center
 
     def peek_zone_bounds(
         self, frame_bgr: np.ndarray
@@ -1210,6 +1268,10 @@ class FishingDetector:
             blue_left_control=ctrl_left,
             blue_right_control=ctrl_right,
             error_control=ctrl_error,
+            blue_left_vision=self._vision_blue_left,
+            blue_right_vision=self._vision_blue_right,
+            zone_center_control=self._zone_center_control,
+            zone_center_vision=self._zone_center_vision,
         )
 
     def detect(self, frame_bgr: np.ndarray) -> DetectionResult:
@@ -1229,6 +1291,11 @@ class FishingDetector:
         bar_bgr, _ = self._bar_slice(frame_bgr)
         blue_mask = self._blue_mask(bar_bgr)
         zone_mask = self._blue_mask_for_zone(bar_bgr)
+
+        vision_left, vision_right, vision_center, _ = self._measure_zone_vision(zone_mask)
+        self._vision_blue_left = vision_left
+        self._vision_blue_right = vision_right
+        self._zone_center_vision = vision_center
 
         prelim_left, prelim_right, _, _ = self._vision_zone_bounds(zone_mask)
         hint_left = self._blue_left if self._blue_left is not None else prelim_left
@@ -1336,17 +1403,9 @@ class FishingDetector:
                 raw_x_hook if raw_x_hook is not None else hook_for_zone,
                 bar_width,
                 hook_trusted=hook_trusted,
+                zone_mask=zone_mask,
             )
-            hook_ctrl = raw_x_hook if raw_x_hook is not None else hook_for_zone
-            if (
-                hook_ctrl is not None
-                and raw_left <= hook_ctrl <= raw_right
-            ):
-                raw_left, raw_right, raw_center = self._pin_control_zone(
-                    raw_left,
-                    raw_right,
-                    hook_ctrl,
-                )
+            raw_center = self._zone_mass_center(zone_mask, raw_left, raw_right)
 
         if (
             raw_x_hook is not None
@@ -1385,6 +1444,12 @@ class FishingDetector:
             ):
                 fallback_left, fallback_right, _, _ = self._vision_zone_bounds(zone_mask)
 
+            fallback_center = None
+            if fallback_left is not None and fallback_right is not None:
+                fallback_center = self._zone_mass_center(
+                    zone_mask, fallback_left, fallback_right
+                )
+
             self._x_hook = None
             self._x_blue = None
             self._blue_left = None
@@ -1396,12 +1461,12 @@ class FishingDetector:
             return DetectionResult(
                 active=False,
                 x_hook=raw_x_hook,
-                x_blue=(fallback_left + fallback_right) / 2.0 if fallback_left is not None and fallback_right is not None else None,
+                x_blue=fallback_center,
                 blue_left=fallback_left,
                 blue_right=fallback_right,
                 error=(
-                    raw_x_hook - (fallback_left + fallback_right) / 2.0
-                    if raw_x_hook is not None and fallback_left is not None and fallback_right is not None
+                    raw_x_hook - fallback_center
+                    if raw_x_hook is not None and fallback_center is not None
                     else None
                 ),
                 blue_pixels=blue_pixels,
@@ -1411,10 +1476,14 @@ class FishingDetector:
                 blue_left_control=fallback_left,
                 blue_right_control=fallback_right,
                 error_control=(
-                    raw_x_hook - (fallback_left + fallback_right) / 2.0
-                    if raw_x_hook is not None and fallback_left is not None and fallback_right is not None
+                    raw_x_hook - fallback_center
+                    if raw_x_hook is not None and fallback_center is not None
                     else None
                 ),
+                blue_left_vision=vision_left,
+                blue_right_vision=vision_right,
+                zone_center_vision=vision_center,
+                zone_center_control=fallback_center,
             )
 
         self._lost_streak = 0
@@ -1432,10 +1501,9 @@ class FishingDetector:
         assert self._blue_left is not None
         assert self._blue_right is not None
 
-        raw_center = (raw_left + raw_right) / 2.0
         error = self._x_hook - self._x_blue
         error_control = raw_x_hook - raw_center
-        self._store_control_state(raw_x_hook, raw_left, raw_right)
+        self._store_control_state(raw_x_hook, raw_left, raw_right, raw_center)
         zone_width = self._blue_right - self._blue_left
 
         return DetectionResult(
@@ -1452,6 +1520,10 @@ class FishingDetector:
             blue_left_control=raw_left,
             blue_right_control=raw_right,
             error_control=error_control,
+            blue_left_vision=vision_left,
+            blue_right_vision=vision_right,
+            zone_center_control=raw_center,
+            zone_center_vision=vision_center,
         )
 
     def debug_frame(self, frame_bgr: np.ndarray) -> np.ndarray:
@@ -1496,15 +1568,36 @@ class FishingDetector:
         left: float | None,
         right: float | None,
         bar_top: int = 0,
+        center: float | None = None,
     ) -> None:
         if left is None or right is None:
             return
         y0 = bar_top if bar_top > 0 else 0
         y1 = overlay.shape[0] - 1
-        center = (left + right) / 2.0
+        if center is None:
+            center = (left + right) / 2.0
         cv2.line(overlay, (int(left), y0), (int(left), y1), (0, 200, 255), 1)
         cv2.line(overlay, (int(right), y0), (int(right), y1), (0, 200, 255), 1)
         cv2.line(overlay, (int(center), y0), (int(center), y1), (0, 200, 255), 2)
+
+    def draw_vision_zone_overlay(
+        self,
+        overlay: np.ndarray,
+        left: float | None,
+        right: float | None,
+        bar_top: int = 0,
+        center: float | None = None,
+    ) -> None:
+        """Linhas verdes = bordas puras da visao (pixels azuis)."""
+        if left is None or right is None:
+            return
+        y0 = bar_top if bar_top > 0 else 0
+        y1 = overlay.shape[0] - 1
+        if center is None:
+            center = (left + right) / 2.0
+        cv2.line(overlay, (int(left), y0), (int(left), y1), (0, 255, 0), 1)
+        cv2.line(overlay, (int(right), y0), (int(right), y1), (0, 255, 0), 1)
+        cv2.line(overlay, (int(center), y0), (int(center), y1), (0, 255, 0), 1)
 
     def blue_mask_for_debug(self, frame_bgr: np.ndarray) -> np.ndarray:
         bar_bgr, _ = self._bar_slice(frame_bgr)

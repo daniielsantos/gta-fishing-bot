@@ -44,6 +44,8 @@ import time
 
 from dataclasses import dataclass
 
+from pathlib import Path
+
 import cv2
 import mss
 
@@ -58,6 +60,8 @@ from config_loader import build_detector, load_config
 from bot_logger import bot_log, close_bot_log, init_bot_log
 
 from controller import MouseController
+
+from debug_recorder import DebugFrameRecorder
 
 from keyboard_input import debug_key_info, tap_key
 
@@ -459,6 +463,21 @@ def main() -> None:
 
     debug_overlay = bool(control_cfg.get("debug_overlay", False))
 
+    debug_record_frames = bool(control_cfg.get("debug_record_frames", False))
+
+    debug_recorder: DebugFrameRecorder | None = None
+
+    if debug_record_frames:
+        frames_dir = Path(__file__).resolve().parent / "debug_frames"
+        debug_recorder = DebugFrameRecorder(
+            frames_dir,
+            fps=float(control_cfg.get("debug_record_fps", 5)),
+            max_frames=int(control_cfg.get("debug_record_max_frames", 5000)),
+            save_on_action_change=bool(control_cfg.get("debug_record_on_action_change", True)),
+            only_minigame=bool(control_cfg.get("debug_record_only_minigame", True)),
+        )
+        bot_log(f"[debug] Gravacao de frames habilitada -> {frames_dir}")
+
     state = RuntimeState()
 
 
@@ -503,6 +522,11 @@ def main() -> None:
                 state.next_rod_key_at = None
 
                 reset_tracking(detector, mouse)
+
+                if debug_recorder is not None and debug_recorder.active:
+                    session, count = debug_recorder.end_session()
+                    if session is not None:
+                        bot_log(f"[debug] Gravacao encerrada: {count} frames em {session}")
 
         elif key == quit_key:
 
@@ -775,10 +799,14 @@ def main() -> None:
                     else (f"{result.x_hook:.0f}" if result.x_hook is not None else "-")
                 )
                 zone_txt = (
-                    f"{(result.blue_left_control + result.blue_right_control) / 2:.0f}"
-                    if result.blue_left_control is not None
-                    and result.blue_right_control is not None
-                    else (f"{result.x_blue:.0f}" if result.x_blue is not None else "-")
+                    f"{result.zone_center_control:.0f}"
+                    if result.zone_center_control is not None
+                    else (
+                        f"{(result.blue_left_control + result.blue_right_control) / 2:.0f}"
+                        if result.blue_left_control is not None
+                        and result.blue_right_control is not None
+                        else (f"{result.x_blue:.0f}" if result.x_blue is not None else "-")
+                    )
                 )
                 lines = [
                     f"{status} | acao={state.last_action} holding={mouse.holding}",
@@ -807,7 +835,19 @@ def main() -> None:
                 bar_top = 0
                 if overlay.shape[0] > 100:
                     bar_top = int(overlay.shape[0] * (1.0 - float(control_cfg.get("bar_strip_ratio", 1.0))))
-                detector.draw_zone_overlay(overlay, zone_left, zone_right, bar_top)
+                vis_left = result.blue_left_vision
+                vis_right = result.blue_right_vision
+                vis_center = result.zone_center_vision
+                if vis_left is None or vis_right is None:
+                    vis_left, vis_right = detector.peek_zone_bounds(frame)
+                    vis_center = None
+                ctrl_center = result.zone_center_control
+                detector.draw_vision_zone_overlay(
+                    overlay, vis_left, vis_right, bar_top, center=vis_center
+                )
+                detector.draw_zone_overlay(
+                    overlay, zone_left, zone_right, bar_top, center=ctrl_center
+                )
                 hook_draw = result.x_hook_control or result.x_hook
                 if hook_draw is None:
                     hook_draw = detector.peek_hook_x(frame)
@@ -821,6 +861,34 @@ def main() -> None:
                     )
                 cv2.imshow("Bot Debug (mesma visao da calibracao)", overlay)
                 cv2.waitKey(1)
+
+                if debug_recorder is not None:
+                    record_minigame = minigame_active or control_active or plausible
+                    if debug_recorder.should_record(state.enabled, record_minigame):
+                        if not debug_recorder.active:
+                            session = debug_recorder.start_session()
+                            bot_log(f"[debug] Nova sessao de frames: {session}")
+                        hook_num = result.x_hook_control or result.x_hook
+                        zone_num = result.zone_center_control
+                        if zone_num is None and (
+                            result.blue_left_control is not None
+                            and result.blue_right_control is not None
+                        ):
+                            zone_num = (result.blue_left_control + result.blue_right_control) / 2.0
+                        elif zone_num is None:
+                            zone_num = result.x_blue
+                        debug_recorder.maybe_save(
+                            overlay,
+                            action=state.last_action,
+                            error=state.last_error,
+                            hook_x=hook_num,
+                            zone_x=zone_num,
+                            active=result.active,
+                        )
+                    elif debug_recorder.active:
+                        session, count = debug_recorder.end_session()
+                        if session is not None:
+                            bot_log(f"[debug] Sessao pausada: {count} frames em {session}")
 
             dt = max(time.perf_counter() - loop_start, 1e-6)
             fps_ema = fps_ema * 0.9 + (1.0 / dt) * 0.1
@@ -838,6 +906,10 @@ def main() -> None:
     listener.stop()
 
     mouse.stop()
+    if debug_recorder is not None and debug_recorder.active:
+        session, count = debug_recorder.end_session()
+        if session is not None:
+            bot_log(f"[debug] Gravacao finalizada: {count} frames em {session}")
     if debug_overlay:
         cv2.destroyAllWindows()
 
