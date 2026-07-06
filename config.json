@@ -35,7 +35,7 @@
     "hook_area_max": 500,
     "inactive_frames_to_end": 60,
     "track_grace_frames": 35,
-    "debug_overlay": true,
+    "debug_overlay": false,
     "control_deadband_px": 4,
     "max_hook_jump_px": 35,
     "hook_search_radius_px": 80,
@@ -76,15 +76,23 @@
     "rod_detect_timeout_sec": 4,
     "rod_retry_gap_sec": 0.8,
     "rod_all_failed_delay_sec": 5,
-    "restart_delay_min_sec": 7,
-    "restart_delay_max_sec": 9,
+    "restart_delay_min_sec": 5,
+    "restart_delay_max_sec": 5.8,
     "initial_delay_sec": 1,
     "anti_afk_enabled": true,
     "anti_afk_keys": [
+      "d",
       "s",
+      "a",
       "w"
     ],
-    "anti_afk_hold_ms": 400,
+    "anti_afk_hold_ms": 100,
+    "anti_afk_hold_overrides": {
+      "w": 100
+    },
+    "anti_afk_gap_ms": 5,
+    "anti_afk_repeat_count": 3,
+    "anti_afk_repeat_gap_ms":1500,
     "anti_afk_every_n_minigames": 10
   }
 }

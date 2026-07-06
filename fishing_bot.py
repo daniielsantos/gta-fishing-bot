@@ -16,7 +16,7 @@ Automacao:
 
   - Alterna teclas 1/2/3 (varas no atalho) ate o minigame iniciar
 
-  - A cada 10 minigames, teclas 's' e 'w' (anti-afk) antes de reiniciar
+  - A cada N minigames, giro curto anti-afk (d -> s -> a -> w) antes de reiniciar
 
 
 
@@ -135,7 +135,15 @@ def random_restart_delay(auto_cfg: dict) -> float:
 
 
 
-def run_anti_afk(state: RuntimeState, anti_afk_keys: list[str] | None, anti_afk_hold_ms: float) -> None:
+def run_anti_afk(
+    state: RuntimeState,
+    anti_afk_keys: list[str] | None,
+    anti_afk_hold_ms: float,
+    anti_afk_gap_ms: float = 500.0,
+    anti_afk_hold_overrides: dict[str, float] | None = None,
+    anti_afk_repeat_count: int = 1,
+    anti_afk_repeat_gap_ms: float = 0.0,
+) -> None:
 
     if not state.anti_afk_before_next or not anti_afk_keys:
 
@@ -143,18 +151,33 @@ def run_anti_afk(state: RuntimeState, anti_afk_keys: list[str] | None, anti_afk_
 
         return
 
-    for key in anti_afk_keys:
-        bot_log(
+    overrides = anti_afk_hold_overrides or {}
+    repeats = max(1, int(anti_afk_repeat_count))
+    keys_label = " -> ".join(anti_afk_keys)
 
-            f"[auto] >>> ANTI-AFK: segurando '{key}' por {anti_afk_hold_ms / 1000:.1f}s "
+    bot_log(f"[auto] >>> ANTI-AFK: {repeats}x giro ({keys_label})")
 
-            f"({debug_key_info(key)})"
+    for spin in range(repeats):
+        if spin > 0:
+            if anti_afk_repeat_gap_ms > 0:
+                time.sleep(anti_afk_repeat_gap_ms / 1000.0)
+            bot_log(f"[auto] ANTI-AFK: volta {spin + 1}/{repeats}")
 
-        )
+        for idx, key in enumerate(anti_afk_keys):
+            if idx > 0 and anti_afk_gap_ms > 0:
+                time.sleep(anti_afk_gap_ms / 1000.0)
+            hold_ms = float(overrides.get(key, anti_afk_hold_ms))
+            bot_log(
 
-        tap_key(key, hold_ms=anti_afk_hold_ms, use_scancode=True)
+                f"[auto] >>> ANTI-AFK: segurando '{key}' por {hold_ms / 1000:.1f}s "
 
-        bot_log(f"[auto] <<< ANTI-AFK: '{key}' solta")
+                f"({debug_key_info(key)})"
+
+            )
+
+            tap_key(key, hold_ms=hold_ms, use_scancode=True)
+
+            bot_log(f"[auto] <<< ANTI-AFK: '{key}' solta")
 
     state.anti_afk_before_next = False
 
@@ -203,6 +226,14 @@ def begin_fishing_cycle(
 
     anti_afk_hold_ms: float,
 
+    anti_afk_gap_ms: float,
+
+    anti_afk_hold_overrides: dict[str, float] | None,
+
+    anti_afk_repeat_count: int,
+
+    anti_afk_repeat_gap_ms: float,
+
     detector,
 
     mouse,
@@ -213,7 +244,15 @@ def begin_fishing_cycle(
 
     state.rod_attempts_this_cycle = 0
 
-    run_anti_afk(state, anti_afk_keys, anti_afk_hold_ms)
+    run_anti_afk(
+        state,
+        anti_afk_keys,
+        anti_afk_hold_ms,
+        anti_afk_gap_ms,
+        anti_afk_hold_overrides,
+        anti_afk_repeat_count,
+        anti_afk_repeat_gap_ms,
+    )
 
     press_rod_key(state, start_keys, detector=detector, mouse=mouse)
 
@@ -395,7 +434,16 @@ def main() -> None:
     else:
         anti_afk_keys = None
 
-    anti_afk_hold_ms = float(auto_cfg.get("anti_afk_hold_ms", 400))
+    anti_afk_hold_ms = float(auto_cfg.get("anti_afk_hold_ms", 150))
+
+    anti_afk_gap_ms = float(auto_cfg.get("anti_afk_gap_ms", 0))
+
+    raw_overrides = auto_cfg.get("anti_afk_hold_overrides", {})
+    anti_afk_hold_overrides = {str(k): float(v) for k, v in raw_overrides.items()} if raw_overrides else None
+
+    anti_afk_repeat_count = int(auto_cfg.get("anti_afk_repeat_count", 1))
+
+    anti_afk_repeat_gap_ms = float(auto_cfg.get("anti_afk_repeat_gap_ms", 0))
 
     anti_afk_every_n = int(auto_cfg.get("anti_afk_every_n_minigames", 10))
 
@@ -513,7 +561,16 @@ def main() -> None:
             ):
 
                 begin_fishing_cycle(
-                    state, start_keys, anti_afk_keys, anti_afk_hold_ms, detector, mouse
+                    state,
+                    start_keys,
+                    anti_afk_keys,
+                    anti_afk_hold_ms,
+                    anti_afk_gap_ms,
+                    anti_afk_hold_overrides,
+                    anti_afk_repeat_count,
+                    anti_afk_repeat_gap_ms,
+                    detector,
+                    mouse,
                 )
 
 
@@ -589,9 +646,12 @@ def main() -> None:
 
                             state.minigames_since_anti_afk = 0
 
-                            keys_label = "+".join(anti_afk_keys)
+                            keys_label = "->".join(anti_afk_keys)
 
-                            bot_log(f"[auto] Anti-afk: {keys_label} apos {anti_afk_every_n} minigames")
+                            bot_log(
+                                f"[auto] Anti-afk: {anti_afk_repeat_count}x giro {keys_label} "
+                                f"apos {anti_afk_every_n} minigames"
+                            )
 
                         schedule_start(
 
