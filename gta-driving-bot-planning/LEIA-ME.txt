@@ -1,0 +1,42 @@
+# Instalar gta-driving-bot no seu PC (Windows)
+
+O **Cloud Agent roda em um servidor Linux remoto** — ele **nao tem acesso** ao seu `C:\Users\daniel\`.
+
+Os arquivos de planejamento ficam nesta pasta: `gta-driving-bot-planning/`
+
+## Passo 1 — Rodar o script (PowerShell)
+
+No PC, abra PowerShell na pasta do **fishing bot** (onde esta este arquivo):
+
+```powershell
+cd C:\Users\daniel\gta-fishing-bot
+.\setup-driving-bot.ps1
+```
+
+O script vai:
+1. Criar `C:\Users\daniel\gta-driving-bot`
+2. Copiar README, PLANNING.md, requirements.txt e .gitignore
+3. Fazer commit e push para https://github.com/daniielsantos/gta-driving-bot
+
+## Passo 2 — Abrir o projeto no Cursor
+
+```powershell
+cd C:\Users\daniel\gta-driving-bot
+cursor .
+```
+
+(ou File → Open Folder)
+
+## Manual (se preferir)
+
+```powershell
+mkdir C:\Users\daniel\gta-driving-bot -Force
+Copy-Item -Recurse C:\Users\daniel\gta-fishing-bot\gta-driving-bot-planning\* C:\Users\daniel\gta-driving-bot\
+cd C:\Users\daniel\gta-driving-bot
+git init -b main
+git remote add origin https://github.com/daniielsantos/gta-driving-bot.git
+git add .
+git commit -m "docs: planejamento inicial do bot de direcao autonoma"
+git pull origin main --rebase --allow-unrelated-histories
+git push -u origin main
+```
