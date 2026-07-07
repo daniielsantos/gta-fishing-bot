@@ -1,0 +1,536 @@
+From 7429091e390cecb0bdcbf231eaee7f3c17425eca Mon Sep 17 00:00:00 2001
+From: Cursor Agent <cursoragent@cursor.com>
+Date: Tue, 7 Jul 2026 02:01:08 +0000
+Subject: [PATCH] docs: corrige README do gta-driving-bot (planejamento
+ autonomo)
+
+Substitui conteudo do fishing bot pelo README de planejamento do bot
+de direcao: minimapa hibrido, checkpoints, fases 0-6 e arquitetura.
+---
+ .gitignore       |   8 +
+ README.md        | 424 ++++++++++++++++++++++++++++-------------------
+ requirements.txt |   8 +
+ 3 files changed, 271 insertions(+), 169 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 requirements.txt
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..08e9537
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,8 @@
++.venv/
++__pycache__/
++*.pyc
++*.pyo
++*.log
++debug_frames/
++captures/
++.env
+diff --git a/README.md b/README.md
+index 93c32a9..f4beae4 100644
+--- a/README.md
++++ b/README.md
+@@ -1,229 +1,315 @@
+-# GTA Fishing Bot
++# GTA Driving Bot
+ 
+-Bot em Python para o minigame de pesca com barra horizontal (anzol branco + zona azul) no **GTA V / FiveM**.
++Bot autônomo em Python para **GTA V / FiveM**: seguir rota no minimapa, parar em checkpoints e evitar colisões básicas.
+ 
+-Calibrado por padrão para **2560×1440 (2K)**. Usa captura de tela, visão computacional (OpenCV) e `SendInput` para controlar o mouse.
++> Projeto separado do [gta-fishing-bot](https://github.com/daniielsantos/gta-fishing-bot).  
++> Este repositório começa como **planejamento e documentação**; o código será implementado em fases.
+ 
+ > **Aviso:** automação em servidores de RP pode violar regras do servidor e resultar em ban. Use por sua conta e risco, preferencialmente para aprendizado local.
+ 
+-## Funcionalidades
++---
+ 
+-- Detecção do **anzol** e da **zona azul** em tempo real
+-- Controle automático do mouse (segurar = zona vai para a direita, soltar = esquerda)
+-- **Centro de massa** da zona (ignora setas `<-` / `->` nas pontas) para tracking mais preciso
+-- Automação completa: alterna varas (`1` / `2` / `3`), reinicia pesca e aplica **anti-AFK**
+-- Calibração visual interativa (`calibrate.py`)
+-- **Debug overlay** com linhas de visão (verde) e controle (ciano)
+-- Gravação opcional de frames de debug em `debug_frames/`
+-- Log em `fishing_bot.log.txt`
++## Visão geral
+ 
+-## Requisitos
++O objetivo não é um “Tesla FSD” no GTA, e sim um bot **útil e iterável**:
+ 
+-- Windows (usa `SendInput` para mouse e teclado)
+-- Python 3.10+
+-- GTA/FiveM em **borderless** ou **janela** (evite fullscreen exclusivo)
+-- Resolução **2560×1440** (ou recalibre a ROI para outra resolução)
+-- Jogo em **foco** (janela ativa) enquanto o bot roda
++1. Seguir a **linha do GPS** no minimapa (A → B)
++2. **Parar** em checkpoints definidos
++3. **Não bater** na medida do possível (freio + correção de faixa)
++4. Evoluir depois para manobras mais complexas (estacionar, ré, reboque…)
+ 
+-## Instalação
++### Por que não só minimapa?
+ 
+-```bash
+-git clone https://github.com/daniielsantos/gta-fishing-bot.git
+-cd gta-fishing-bot
+-python -m venv .venv
+-```
++Seguir apenas a linha roxa/laranja do GPS **não garante** que o carro está na pista correta. A rota pode mandar virar à esquerda enquanto à esquerda há calçada, muro ou contramão.
+ 
+-**Windows (PowerShell):**
++Por isso o design é **híbrido** desde o início:
+ 
+-```powershell
+-.\.venv\Scripts\Activate.ps1
+-pip install -r requirements.txt
++| Camada | Função |
++|--------|--------|
++| **Minimapa** | Navegação macro — para onde ir, curvas, checkpoints |
++| **Visão da pista** | Navegação micro — asfalto válido, centro da faixa |
++| **Obstáculos** | Frear / desviar leve quando algo bloqueia à frente |
++| **Fusão** | Combina GPS + faixa + obstáculo na decisão final |
++
++```
++┌─────────────────────────────────────────┐
++│  CAMADA 1 — Minimapa (onde ir)          │
++│  • posição e ângulo da seta do jogador  │
++│  • linha roxa/laranja do GPS            │
++│  • distância até checkpoint             │
++└─────────────────┬───────────────────────┘
++                  │
++┌─────────────────▼───────────────────────┐
++│  CAMADA 2 — Pista (onde posso ir)       │
++│  • seta sobre pixel de "rua" no mapa?   │
++│  • asfalto à frente na câmera           │
++│  • centro da faixa (bordas / cor)       │
++└─────────────────┬───────────────────────┘
++                  │
++┌─────────────────▼───────────────────────┐
++│  CAMADA 3 — Obstáculos                  │
++│  • área livre à frente encolhe? → frear │
++│  • (futuro) detecção de objetos (YOLO)  │
++└─────────────────┬───────────────────────┘
++                  │
++┌─────────────────▼───────────────────────┐
++│  FUSÃO — decisão (W/A/S/D)              │
++│  volante = w_gps·erro_gps + w_faixa·erro_faixa │
++│  velocidade = curva + obstáculo + checkpoint   │
++└─────────────────────────────────────────┘
+ ```
+ 
+-**Linux / macOS:**
++---
+ 
+-```bash
+-source .venv/bin/activate
+-pip install -r requirements.txt
+-```
++## Stack técnica (planejada)
+ 
+-> O controle de mouse via `SendInput` só funciona no Windows. Em Linux/macOS o projeto pode rodar para calibração/testes de visão, mas o bot não envia cliques ao jogo.
++Reaproveita conceitos do fishing bot:
+ 
+-## Configuração do jogo
++| Componente | Tecnologia |
++|------------|------------|
++| Captura de tela | `mss` |
++| Visão | `OpenCV` (cor, contorno, template) |
++| Controle | `SendInput` (W/A/S/D, freio, Space) |
++| Hotkeys / loop | `pynput` |
++| Config | `config.json` + calibração visual |
++| (futuro) Objetos | YOLO / Ultralytics |
+ 
+-1. Modo **borderless windowed** ou **janela**
+-2. Resolução **2560×1440**
+-3. Não altere a escala da UI da barra de pesca
++**Requisitos iniciais:**
+ 
+-## Calibração (primeira vez)
++- Windows (SendInput)
++- Python 3.10+
++- GTA/FiveM em **borderless** ou **janela**
++- Resolução de referência: **2560×1440** (recalibrável)
++- Jogo em **foco** (janela ativa)
+ 
+-Com o minigame de pesca aberto na tela:
++---
+ 
+-```bash
+-python calibrate.py
+-```
++## Fases de desenvolvimento
+ 
+-| Tecla | Ação |
+-|-------|------|
+-| Setas | Move a ROI |
+-| W / A / X / D | Ajusta largura e altura da ROI |
+-| `[` `]` | Matiz (H) do azul |
+-| `;` `'` | Saturação (S) do azul |
+-| `,` `.` | Brilho (V) do azul |
+-| `-` `=` | Threshold do anzol branco |
+-| `S` | Salva em `config.json` |
+-| `Q` / `ESC` | Sair |
+-
+-**Objetivo:** máscara laranja cobrindo a zona azul, linha branca no anzol, status `ATIVO`.
+-
+-**Overlay na calibração:**
+-
+-| Cor | Significado |
+-|-----|-------------|
+-| Verde | Bordas e centro da **visão** (pixels detectados) |
+-| Ciano | Bordas e centro usados pelo **controle** |
+-| Branco | Posição do anzol |
+-| Vermelho | Margens da barra (cuidado nas bordas) |
+-
+-## Uso
+-
+-```bash
+-python fishing_bot.py
+-```
++### Fase 0 — Fundação (atual)
+ 
+-| Tecla | Ação |
+-|-------|------|
+-| **F6** | Liga / desliga o bot |
+-| **F9** | Encerra o programa |
++- [x] Repositório e documentação de planejamento
++- [ ] Estrutura de pastas e `config.json` base
++- [ ] `requirements.txt`
++- [ ] Calibração da ROI do minimapa
+ 
+-### Fluxo manual (só controle do minigame)
++**Entregável:** projeto clonável com README e calibração do minimapa funcionando.
+ 
+-1. Comece a pescar manualmente no jogo
+-2. Quando o minigame aparecer, pressione **F6**
+-3. O bot segura/solta o botão esquerdo para manter o anzol na zona azul
+-4. **F6** novamente para pausar
++---
+ 
+-### Fluxo automático (`automation.enabled: true`)
++### Fase 1 — Navegação no minimapa
+ 
+-1. Pressione **F6** com o jogo em foco
+-2. O bot alterna as teclas `1`, `2`, `3` até o minigame iniciar
+-3. Controla o minigame automaticamente
+-4. Ao terminar, aguarda e reinicia a pesca
+-5. A cada **N** minigames, executa um giro anti-AFK (`d → s → a → w` por padrão)
++**Objetivo:** carro segue a linha do GPS em estrada reta e curvas suaves.
+ 
+-## Arquitetura
++| Tarefa | Detalhe |
++|--------|---------|
++| ROI do minimapa | Recorte fixo calibrado (canto inferior esquerdo) |
++| Detectar seta do jogador | Posição (x, y) e ângulo no minimapa |
++| Detectar linha do GPS | Cor roxa/laranja, polyline ou ponto-alvo à frente |
++| Controlador PID | Erro angular → A/D (pulsos curtos); distância → W/S |
++| Estados | `IDLE`, `NAVIGATING`, `STOPPED` |
+ 
+-```
+-fishing_bot.py      → loop principal, automação, hotkeys, debug
+-calibrate.py        → calibração visual da ROI e cores
+-detector.py         → detecção do anzol, zona azul e centro de massa
+-controller.py       → lógica de mouse (chase / track / center)
+-config_loader.py    → carrega config.json e instancia o detector
+-keyboard_input.py   → envio de teclas via SendInput
+-debug_recorder.py   → grava frames do overlay em debug_frames/
+-bot_logger.py       → log em fishing_bot.log.txt
+-config.json         → ROI, HSV, controle e automação
+-```
++**Entregável:** bot segue rota marcada no GPS por 30–60 s sem sair da estrada em trecho simples.
+ 
+-## Ajuste fino (`config.json`)
++**Limitação conhecida:** pode ir para calçada se só usar minimapa.
+ 
+-### Controle
++---
+ 
+-```json
+-"control": {
+-  "control_deadband_px": 12,
+-  "capture_fps": 30,
+-  "zone_smoothing": 0.65,
+-  "expected_zone_width_px": 220,
+-  "debug_overlay": false,
+-  "debug_record_frames": false
+-}
+-```
++### Fase 2 — Noção de posição na pista
+ 
+-| Parâmetro | Descrição |
+-|-----------|-----------|
+-| `control_deadband_px` | Margem em px antes de corrigir direção (menor = mais agressivo) |
+-| `capture_fps` | Taxa alvo do loop de captura |
+-| `zone_smoothing` | Suavização da posição da zona (0–1) |
+-| `expected_zone_width_px` | Largura esperada da zona azul |
+-| `debug_overlay` | Janela OpenCV com overlay de debug |
+-| `debug_record_frames` | Grava PNGs em `debug_frames/<timestamp>/` |
++**Objetivo:** bot sabe se está na **rua** e não só na linha do GPS.
+ 
+-### Automação
++| Tarefa | Detalhe |
++|--------|---------|
++| Rua no minimapa | Seta deve ficar sobre pixels “cinza” (via), não verde/calçada |
++| Visão frontal | ROI na frente do carro — detectar asfalto vs não-asfalto |
++| Fusão | `volante = 0.6·erro_gps + 0.4·erro_faixa` (pesos ajustáveis) |
++| Correção | Se seta saiu da via no mapa → empurrar de volta |
+ 
+-```json
+-"automation": {
+-  "enabled": true,
+-  "start_keys": ["1", "2", "3"],
+-  "anti_afk_enabled": true,
+-  "anti_afk_keys": ["d", "s", "a", "w"],
+-  "anti_afk_every_n_minigames": 10,
+-  "anti_afk_repeat_count": 3
+-}
+-```
++**Entregável:** menos casos de “seguiu GPS e foi parar na calçada”.
+ 
+-| Parâmetro | Descrição |
++---
++
++### Fase 3 — Checkpoints
++
++**Objetivo:** parar automaticamente em pontos da rota.
++
++| Abordagem | Descrição |
+ |-----------|-----------|
+-| `start_keys` | Teclas das varas no atalho (alterna até achar o minigame) |
+-| `anti_afk_keys` | Sequência do giro anti-AFK |
+-| `anti_afk_every_n_minigames` | A cada quantos minigames o anti-AFK roda |
+-| `anti_afk_repeat_count` | Quantas vezes repetir a sequência |
+-| `anti_afk_hold_ms` | Tempo que cada tecla fica pressionada |
+-| `anti_afk_hold_overrides` | Override de duração por tecla (ex.: `"w": 250`) |
++| **Waypoints no minimapa** | Lista de (x%, y%) no mapa; parar quando distância < limiar |
++| **Blip de missão** | Template do ícone no minimapa |
++| **HUD (opcional)** | OCR da distância (“150m” → “0m”) |
++
++**Estados adicionais:** `APPROACHING_CHECKPOINT` → `STOPPING` → `WAIT_AT_CHECKPOINT` → `NAVIGATING`
++
++**Entregável:** rota com 3 checkpoints; para em cada um e continua.
++
++---
+ 
+-## Debug e gravação de frames
++### Fase 4 — Anti-colisão básica
+ 
+-Com `debug_overlay: true`, o bot mostra:
++**Objetivo:** frear antes de bater; não dirigir perfeito em cidade lotada.
+ 
+-- Linhas **verdes** = detecção pura (pixels azuis)
+-- Linhas **ciano** = limites usados pelo controle
+-- Linha **branca** = anzol
+-- Texto com ação, erro, FPS e estado do minigame
++| Nível | Comportamento |
++|-------|----------------|
++| Básico | Centro da tela “fecha” (menos pixels de estrada longe) → frear |
++| Médio | Obstáculo deslocado no centro → frear + leve A/D |
++| Avançado (futuro) | YOLO para carros / pedestres |
+ 
+-Com `debug_record_frames: true`, salva frames em `debug_frames/` com nome descritivo:
++**Entregável:** reduz batidas em trânsito leve e obstáculos estáticos.
++
++---
++
++### Fase 5 — Recuperação de erros
++
++**Objetivo:** sair de atoleiro sem intervenção manual.
++
++- Saiu da rota → realinhar no minimapa
++- Parou em muro/obstáculo → ré curta + correção de ângulo
++- Perdeu linha GPS → buscar último ponto conhecido da rota
++
++**Entregável:** bot se recupera de erros comuns sem reset.
++
++---
++
++### Fase 6+ — Expansões (fora do MVP)
++
++| Feature | Dificuldade | Notas |
++|---------|-------------|-------|
++| Estacionar em vaga | Média | Ré + alinhamento |
++| Cidade densa 24/7 | Alta | Muito tuning |
++| Noite / chuva | Alta | Recalibrar HSV |
++| Engate de reboque | Muito alta | Câmera traseira + FSM de ré |
++| ML / imitation learning | Alta | Dataset + GPU |
++
++---
++
++## Estrutura de pastas (planejada)
+ 
+ ```
+-000042_track-right_acton_e-12_a704_z716.png
++gta-driving-bot/
++├── README.md                 # este arquivo
++├── PLANNING.md               # notas técnicas detalhadas (opcional)
++├── requirements.txt
++├── config.json               # ROIs, cores, waypoints, PID
++├── calibrate_minimap.py      # calibra ROI e cores do minimapa
++├── calibrate_road.py         # calibra ROI da visão frontal (fase 2)
++├── drive_bot.py              # loop principal + hotkeys
++├── minimap/
++│   ├── detector.py           # seta, linha GPS, pixels de rua
++│   └── navigator.py          # erro angular, distância, waypoints
++├── vision/
++│   ├── lane.py               # asfalto / centro da faixa
++│   └── obstacle.py           # freio por área livre
++├── control/
++│   ├── vehicle.py            # W/A/S/D via SendInput
++│   └── fusion.py             # combina camadas
++├── debug/
++│   └── recorder.py           # grava frames (como no fishing bot)
++└── captures/                 # screenshots de debug (gitignored)
+ ```
+ 
+-- `track-right` = última ação
+-- `e-12` = erro em pixels
+-- `a704` = posição do anzol
+-- `z716` = centro da zona
++---
+ 
+-## Problemas comuns
++## Controle do veículo
+ 
+-| Problema | Solução |
+-|----------|---------|
+-| Tela preta na captura | Use borderless ou janela |
+-| Bot não detecta minigame | Rode `calibrate.py` e ajuste ROI/HSV |
+-| Anzol na borda da zona | Ajuste `control_deadband_px` (tente 8–15) |
+-| Linhas verde/ciano desalinhadas | Recalibre; verifique `expected_zone_width_px` |
+-| Oscila demais | Aumente `control_deadband_px` ou `zone_smoothing` |
+-| Reage tarde | Diminua `control_deadband_px` ou aumente `capture_fps` |
+-| Bot não clica no jogo | Jogo precisa estar em foco (janela ativa) |
+-| Resolução diferente | Recalibre a ROI ou escale os valores (veja abaixo) |
++| Tecla | Função |
++|-------|--------|
++| W | Acelerar |
++| S | Ré / freio motor |
++| A / D | Volante (pulsos curtos = mais preciso que segurar fixo) |
++| Space | Freio de mão (parar no checkpoint) |
++| (futuro) E | Interações (portas, missões) |
+ 
+-## Escalar para outra resolução
++**Hotkeys do bot (proposta):**
+ 
+-Multiplique a ROI por:
++| Tecla | Ação |
++|-------|------|
++| F6 | Liga / desliga |
++| F7 | Pausa navegação (mantém captura) |
++| F9 | Encerra |
+ 
+-- largura: `sua_largura / 2560`
+-- altura: `sua_altura / 1440`
++---
+ 
+-Exemplo **1920×1080** (fator **0,75**):
++## Configuração (`config.json` — rascunho)
+ 
+ ```json
+-"roi": {
+-  "left": 596,
+-  "top": 823,
+-  "width": 720,
+-  "height": 86
++{
++  "resolution": { "width": 2560, "height": 1440 },
++  "minimap": {
++    "roi": { "left": 20, "top": 900, "width": 280, "height": 280 },
++    "gps_color_hsv": { "lower": [140, 100, 100], "upper": [170, 255, 255] },
++    "road_gray_range": [80, 140],
++    "player_arrow_template": "assets/arrow.png"
++  },
++  "road_view": {
++    "roi": { "left": 800, "top": 600, "width": 960, "height": 400 },
++    "lane_center_weight": 0.4
++  },
++  "control": {
++    "gps_weight": 0.6,
++    "steer_deadband_deg": 3,
++    "max_steer_pulse_ms": 80,
++    "cruise_throttle": true,
++    "brake_distance_threshold": 0.35
++  },
++  "waypoints": [
++    { "name": "checkpoint_1", "minimap_x": 0.45, "minimap_y": 0.62, "stop_radius_px": 18 },
++    { "name": "checkpoint_2", "minimap_x": 0.51, "minimap_y": 0.55, "stop_radius_px": 18 }
++  ],
++  "hotkeys": { "toggle": "f6", "pause": "f7", "quit": "f9" }
+ }
+ ```
+ 
+-Depois rode `calibrate.py` para afinar.
++---
++
++## Expectativas realistas
++
++| Cenário | MVP (fases 1–4) | Futuro |
++|---------|-----------------|--------|
++| Estrada longa com GPS | Bom | Muito bom |
++| Checkpoints em sequência | Bom | Muito bom |
++| Trânsito leve | Razoável | Bom |
++| Cidade lotada | Fraco | Médio |
++| Noite / chuva | Fraco | Médio com retuning |
++| Contramão | Raro (GPS costuma acertar sentido) | Heurísticas extras |
++| Engate de reboque | Fora do escopo | Fase 6+ |
++
++---
++
++## Relação com o fishing bot
++
++O [gta-fishing-bot](https://github.com/daniielsantos/gta-fishing-bot) validou o stack:
++
++- captura com `mss`
++- detecção com OpenCV
++- controle com `SendInput`
++- calibração visual + `config.json`
++- debug overlay e gravação de frames
++
++Este projeto **reutiliza o mesmo padrão**, mudando o domínio (minimapa + pista em vez de anzol + zona azul).
++
++---
++
++## Próximos passos (implementação)
++
++1. Criar `requirements.txt` e `config.json` mínimo
++2. `calibrate_minimap.py` — ROI + preview ao vivo
++3. Detectar seta e linha GPS no minimapa
++4. PID simples (W + A/D) em estrada vazia
++5. Fase 2: fusão com “seta na rua”
++6. Fase 3: waypoints e parada
++7. Fase 4: freio por obstáculo à frente
++
++---
+ 
+ ## Licença
+ 
+ Projeto educacional. Sem garantias. Use com responsabilidade.
++
++---
++
++## Referências internas
++
++- Repositório irmão: [daniielsantos/gta-fishing-bot](https://github.com/daniielsantos/gta-fishing-bot)
++- Discussão de arquitetura: minimapa híbrido + checkpoints + anti-colisão (planejamento inicial, jul/2026)
+diff --git a/requirements.txt b/requirements.txt
+new file mode 100644
+index 0000000..7eafd92
+--- /dev/null
++++ b/requirements.txt
+@@ -0,0 +1,8 @@
++# Dependências (a adicionar na Fase 0)
++mss>=9.0.0
++numpy>=1.24.0
++opencv-python>=4.8.0
++pynput>=1.7.6
++
++# Fase 4+ (opcional)
++# ultralytics>=8.0.0
+-- 
+2.43.0
+
