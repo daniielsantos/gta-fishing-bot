@@ -91,11 +91,11 @@
       "a",
       "w"
     ],
-    "anti_afk_hold_ms": 100,
+    "anti_afk_hold_ms": 200,
     "anti_afk_hold_overrides": {
-      "w": 100
+      "w": 200
     },
-    "anti_afk_gap_ms": 5,
+    "anti_afk_gap_ms": 10,
     "anti_afk_repeat_count": 3,
     "anti_afk_repeat_gap_ms":1500,
     "anti_afk_every_n_minigames": 10
