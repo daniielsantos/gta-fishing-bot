@@ -40,6 +40,8 @@ from __future__ import annotations
 
 import random
 
+import sys
+
 import time
 
 from dataclasses import dataclass
@@ -64,6 +66,14 @@ from controller import MouseController
 from debug_recorder import DebugFrameRecorder
 
 from keyboard_input import debug_key_info, tap_key
+
+
+STASH_ROUTE_DIR = Path(__file__).resolve().parent / "stash-route"
+if str(STASH_ROUTE_DIR) not in sys.path:
+    sys.path.insert(0, str(STASH_ROUTE_DIR))
+
+from stash_inventory import maybe_stash_if_full
+from inventory_utils import ensure_tesseract
 
 
 
@@ -242,11 +252,17 @@ def begin_fishing_cycle(
 
     mouse,
 
+    stash_cfg: dict | None = None,
+
+    sct=None,
+
 ) -> None:
 
     state.next_start_at = None
 
     state.rod_attempts_this_cycle = 0
+
+    will_anti_afk = bool(state.anti_afk_before_next and anti_afk_keys)
 
     run_anti_afk(
         state,
@@ -257,6 +273,24 @@ def begin_fishing_cycle(
         anti_afk_repeat_count,
         anti_afk_repeat_gap_ms,
     )
+
+    if (
+        will_anti_afk
+        and stash_cfg
+        and stash_cfg.get("enabled")
+        and stash_cfg.get("check_after_anti_afk", True)
+    ):
+        bot_log("[stash] Checando peso apos anti-afk...")
+        moved = maybe_stash_if_full(
+            stash_cfg,
+            startup_delay_sec=0,
+            after_movement=True,
+            sct=sct,
+        )
+        if moved:
+            bot_log(f"[stash] Stash automatico: {moved} transferencia(s)")
+    elif will_anti_afk and stash_cfg and not stash_cfg.get("enabled"):
+        bot_log("[stash] Stash automatico desligado (stash_inventory.enabled=false)")
 
     press_rod_key(state, start_keys, detector=detector, mouse=mouse)
 
@@ -423,6 +457,8 @@ def main() -> None:
 
     auto_cfg = config.get("automation", {})
 
+    stash_cfg = dict(config.get("stash_inventory", {}))
+
 
 
     auto_start = bool(auto_cfg.get("enabled", True))
@@ -559,6 +595,20 @@ def main() -> None:
     bot_log(__doc__)
 
     bot_log(f"[bot] Varas nos atalhos: {start_keys}. Pressione F6 para ligar.")
+    if stash_cfg.get("enabled"):
+        bot_log(
+            "[stash] Stash automatico LIGADO — checa peso apos anti-afk "
+            f"(a cada {anti_afk_every_n} minigames)"
+        )
+        tess_ok, tess_err = ensure_tesseract(force=True)
+        if tess_ok:
+            bot_log("[stash] OCR de peso: OK")
+        else:
+            bot_log(f"[stash] AVISO: {tess_err}")
+            bot_log(
+                "[stash] Rode o bot com: .venv\\Scripts\\python.exe fishing_bot.py "
+                "e instale: .venv\\Scripts\\pip.exe install -r requirements.txt"
+            )
 
     bot_log(f"[bot] Log em arquivo: {log_path}")
 
@@ -595,6 +645,8 @@ def main() -> None:
                     anti_afk_repeat_gap_ms,
                     detector,
                     mouse,
+                    stash_cfg,
+                    sct,
                 )
 
 

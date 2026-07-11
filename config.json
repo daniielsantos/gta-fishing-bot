@@ -96,8 +96,136 @@
       "w": 200
     },
     "anti_afk_gap_ms": 10,
-    "anti_afk_repeat_count": 3,
-    "anti_afk_repeat_gap_ms":1500,
-    "anti_afk_every_n_minigames": 10
+    "anti_afk_repeat_count": 2,
+    "anti_afk_repeat_gap_ms": 1500,
+    "anti_afk_every_n_minigames": 15
+  },
+  "stash_route": {
+    "enabled": false,
+    "route_to_car": "stash-route/routes/pier_to_car.json",
+    "route_to_spot": "stash-route/routes/car_to_pier.json",
+    "segment_gap_ms": 0,
+    "time_scale": 1.0
+  },
+  "stash_inventory": {
+    "enabled": true,
+    "check_after_anti_afk": true,
+    "open_key": "i",
+    "close_key": "esc",
+    "weight_max_kg": 80.0,
+    "weight_trigger_ratio": 0.98,
+    "fish_species": [
+      "perch",
+      "carp",
+      "trout",
+      "salmon",
+      "megalodon"
+    ],
+    "trunk_species_order": [
+      "perch",
+      "carp",
+      "trout",
+      "salmon",
+      "megalodon",
+      "sponge"
+    ],
+    "drag_hold_ms": 80,
+    "drag_duration_ms": 250,
+    "startup_delay_ms": 3000,
+    "ui_open_wait_ms": 1200,
+    "inventory_key_hold_ms": 150,
+    "post_movement_wait_ms": 1200,
+    "release_keys_before_stash": [
+      "w",
+      "a",
+      "s",
+      "d"
+    ],
+    "weight_read_wait_ms": 500,
+    "weight_read_attempts": 10,
+    "weight_read_interval_ms": 200,
+    "between_drag_ms": 150,
+    "pocket_slots": [
+      {
+        "index": 0,
+        "x": 333,
+        "y": 389
+      },
+      {
+        "index": 1,
+        "x": 480,
+        "y": 384
+      },
+      {
+        "index": 2,
+        "x": 621,
+        "y": 386
+      },
+      {
+        "index": 3,
+        "x": 763,
+        "y": 391
+      },
+      {
+        "index": 4,
+        "x": 907,
+        "y": 389
+      },
+      {
+        "index": 5,
+        "x": 1046,
+        "y": 380
+      }
+    ],
+    "trunk_slots": [
+      {
+        "index": 0,
+        "species": "perch",
+        "x": 1754,
+        "y": 505
+      },
+      {
+        "index": 1,
+        "species": "carp",
+        "x": 1891,
+        "y": 509
+      },
+      {
+        "index": 2,
+        "species": "trout",
+        "x": 2029,
+        "y": 507
+      },
+      {
+        "index": 3,
+        "species": "salmon",
+        "x": 2178,
+        "y": 505
+      },
+      {
+        "index": 4,
+        "species": "megalodon",
+        "x": 2314,
+        "y": 509
+      },
+      {
+        "index": 5,
+        "species": "sponge",
+        "x": 2450,
+        "y": 514
+      }
+    ],
+    "weight_roi": {
+      "left": 221,
+      "top": 90,
+      "width": 113,
+      "height": 26
+    },
+    "label_offset": {
+      "left": -55,
+      "top": 48,
+      "width": 110,
+      "height": 36
+    }
   }
 }

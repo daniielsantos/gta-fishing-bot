@@ -1,0 +1,3022 @@
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo segmento | ESC = sair sem salvar
+
+O script apenas ESCUTA teclas — nao envia input ao jogo.
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] F10 salvar | F11 desfazer segmento | ESC cancelar
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Resolucao de referencia: 2560x1440
+[record] combo ativo: s
+[record] segmento #1: s por 314ms
+[record] combo ativo: d+s
+[record] segmento #2: d+s por 132ms
+[record] combo ativo: d
+[record] segmento #3: d por 862ms
+[record] combo ativo: d+w
+[record] segmento #4: d+w por 216ms
+[record] combo ativo: w
+[record] segmento #5: w por 4837ms
+[record] combo ativo: d+w
+[record] segmento #6: d+w por 99ms
+[record] combo ativo: w
+[record] segmento #7: w por 399ms
+[record] combo ativo: d+w
+[record] segmento #8: d+w por 349ms
+[record] combo ativo: w
+[record] segmento #9: w por 549ms
+[record] combo ativo: a+w
+[record] segmento #10: a+w por 82ms
+[record] combo ativo: w
+[record] segmento #11: w por 381ms
+[record] combo ativo: a+w
+[record] segmento #12: a+w por 200ms
+[record] combo ativo: w
+[record] segmento #13: w por 981ms
+[record] combo ativo: a+w
+[record] segmento #14: a+w por 133ms
+[record] combo ativo: w
+[record] segmento #15: w por 6112ms
+[record] combo ativo: d+w
+[record] segmento #16: d+w por 1263ms
+[record] combo ativo: w
+[record] segmento #17: w por 366ms
+[record] combo ativo: d+w
+[record] segmento #18: d+w por 366ms
+[record] combo ativo: w
+[record] segmento #19: w por 566ms
+[record] combo ativo: d+w
+[record] segmento #20: d+w por 166ms
+[record] combo ativo: w
+[record] segmento #21: w por 1082ms
+[record] combo ativo: d+w
+[record] segmento #22: d+w por 264ms
+[record] combo ativo: w
+[record] segmento #23: w por 2049ms
+[record] combo ativo: d+w
+[record] segmento #24: d+w por 466ms
+[record] combo ativo: w
+[record] segmento #25: w por 350ms
+[record] combo ativo: d+w
+[record] segmento #26: d+w por 1193ms
+[record] combo ativo: d
+[record] segmento #27: d por 766ms
+[record] combo ativo: d+w
+[record] segmento #28: d+w por 483ms
+[record] combo ativo: w
+[record] segmento #29: w por 266ms
+[record] combo ativo: d+w
+[record] segmento #30: d+w por 266ms
+[record] combo ativo: w
+[record] segmento #31: w por 349ms
+[record] combo ativo: d+w
+[record] segmento #32: d+w por 199ms
+[record] combo ativo: w
+[record] segmento #33: w por 633ms
+[record] combo ativo: d+w
+[record] segmento #34: d+w por 167ms
+[record] combo ativo: w
+[record] segmento #35: w por 2277ms
+[record] combo ativo: a+w
+[record] segmento #36: a+w por 1897ms
+[record] combo ativo: w
+[record] segmento #37: w por 349ms
+[record] combo ativo: a+w
+[record] segmento #38: a+w por 100ms
+[record] combo ativo: w
+[record] segmento #39: w por 349ms
+[record] combo ativo: a+w
+[record] segmento #40: a+w por 149ms
+[record] combo ativo: w
+[record] segmento #41: w por 416ms
+[record] combo ativo: a+w
+[record] segmento #42: a+w por 183ms
+[record] combo ativo: w
+[record] segmento #43: w por 7782ms
+[record] combo ativo: a+w
+[record] segmento #44: a+w por 550ms
+[record] combo ativo: a
+[record] segmento #45: a por 699ms
+[record] combo ativo: a+w
+[record] segmento #46: a+w por 2216ms
+[record] combo ativo: w
+[record] segmento #47: w por 1367ms
+[record] combo ativo: a+w
+[record] segmento #48: a+w por 132ms
+[record] combo ativo: w
+[record] segmento #49: w por 432ms
+[record] combo ativo: a+w
+[record] segmento #50: a+w por 216ms
+[record] combo ativo: w
+[record] segmento #51: w por 484ms
+[record] combo ativo: a+w
+[record] segmento #52: a+w por 49ms
+[record] combo ativo: w
+[record] segmento #53: w por 549ms
+[record] combo ativo: a+w
+[record] segmento #54: a+w por 149ms
+[record] combo ativo: w
+[record] segmento #55: w por 733ms
+[record] combo ativo: a+w
+[record] segmento #56: a+w por 198ms
+[record] combo ativo: w
+[record] segmento #57: w por 1497ms
+[record] combo ativo: a+w
+[record] segmento #58: a+w por 99ms
+[record] combo ativo: w
+[record] segmento #59: w por 432ms
+[record] Salvo: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] pier_to_car: 59 segmentos, 50.2s total
+[walk] pier_to_car: 59 segmentos, 50.2s total
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] segmento 1/59: s por 314ms
+[walk]   concluido em 329ms
+[walk] segmento 2/59: d+s por 132ms
+[walk]   concluido em 182ms
+[walk] segmento 3/59: d por 862ms
+[walk]   concluido em 866ms
+[walk] segmento 4/59: d+w por 216ms
+[walk]   concluido em 266ms
+[walk] segmento 5/59: w por 4837ms
+[walk]   concluido em 4862ms
+[walk] segmento 6/59: d+w por 99ms
+[walk]   concluido em 133ms
+[walk] segmento 7/59: w por 399ms
+[walk]   concluido em 416ms
+[walk] segmento 8/59: d+w por 349ms
+[walk]   concluido em 399ms
+[walk] segmento 9/59: w por 549ms
+[walk]   concluido em 550ms
+[walk] segmento 10/59: a+w por 82ms
+[walk]   concluido em 115ms
+[walk] segmento 11/59: w por 381ms
+[walk]   concluido em 396ms
+[walk] segmento 12/59: a+w por 200ms
+[walk]   concluido em 263ms
+[walk] segmento 13/59: w por 981ms
+[walk]   concluido em 997ms
+[walk] segmento 14/59: a+w por 133ms
+[walk]   concluido em 198ms
+[walk] segmento 15/59: w por 6112ms
+[walk]   concluido em 6114ms
+[walk] segmento 16/59: d+w por 1263ms
+[walk]   concluido em 1316ms
+[walk] segmento 17/59: w por 366ms
+[walk]   concluido em 382ms
+[walk] segmento 18/59: d+w por 366ms
+[walk]   concluido em 415ms
+[walk] segmento 19/59: w por 566ms
+[walk]   concluido em 582ms
+[walk] segmento 20/59: d+w por 166ms
+[walk]   concluido em 199ms
+[walk] segmento 21/59: w por 1082ms
+[walk]   concluido em 1112ms
+[walk] segmento 22/59: d+w por 264ms
+[walk]   concluido em 315ms
+[walk] segmento 23/59: w por 2049ms
+[walk]   concluido em 2080ms
+[walk] segmento 24/59: d+w por 466ms
+[walk]   concluido em 532ms
+[walk] segmento 25/59: w por 350ms
+[walk] pier_to_car: 59 segmentos, 50.2s total
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] segmento 1/59: s por 314ms
+[walk]   concluido em 330ms
+[walk] segmento 2/59: d+s por 132ms
+[walk]   concluido em 182ms
+[walk] segmento 3/59: d por 862ms
+[walk]   concluido em 882ms
+[walk] segmento 4/59: d+w por 216ms
+[walk]   concluido em 266ms
+[walk] segmento 5/59: w por 4837ms
+[walk]   concluido em 4860ms
+[walk] segmento 6/59: d+w por 99ms
+[walk]   concluido em 133ms
+[walk] segmento 7/59: w por 399ms
+[walk]   concluido em 416ms
+[walk] segmento 8/59: d+w por 349ms
+[walk]   concluido em 398ms
+[walk] segmento 9/59: w por 549ms
+[walk]   concluido em 580ms
+[walk] segmento 10/59: a+w por 82ms
+[walk]   concluido em 126ms
+[walk] segmento 11/59: w por 381ms
+[walk]   concluido em 399ms
+[walk] segmento 12/59: a+w por 200ms
+[walk]   concluido em 249ms
+[walk] segmento 13/59: w por 981ms
+[walk]   concluido em 999ms
+[walk] segmento 14/59: a+w por 133ms
+[walk]   concluido em 182ms
+[walk] segmento 15/59: w por 6112ms
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo segmento | ESC = sair sem salvar
+
+O script apenas ESCUTA teclas — nao envia input ao jogo.
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] F10 salvar | F11 desfazer segmento | ESC cancelar
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Resolucao de referencia: 2560x1440
+[record] combo ativo: d
+[record] segmento #1: d por 233ms
+[record] combo ativo: d+s
+[record] segmento #2: d+s por 629ms
+[record] combo ativo: d
+[record] segmento #3: d por 232ms
+[record] combo ativo: d+w
+[record] segmento #4: d+w por 199ms
+[record] combo ativo: w
+[record] segmento #5: w por 799ms
+[record] combo ativo: a+w
+[record] segmento #6: a+w por 379ms
+[record] combo ativo: w
+[record] segmento #7: w por 6095ms
+[record] combo ativo: a+w
+[record] segmento #8: a+w por 234ms
+[record] combo ativo: w
+[record] segmento #9: w por 1268ms
+[record] combo ativo: d+w
+[record] segmento #10: d+w por 116ms
+[record] combo ativo: w
+[record] segmento #11: w por 1083ms
+[record] combo ativo: d+w
+[record] segmento #12: d+w por 182ms
+[record] combo ativo: w
+[record] segmento #13: w por 1899ms
+[record] combo ativo: d+w
+[record] segmento #14: d+w por 83ms
+[record] combo ativo: w
+[record] segmento #15: w por 1481ms
+[record] combo ativo: a+w
+[record] segmento #16: a+w por 115ms
+[record] combo ativo: w
+[record] segmento #17: w por 731ms
+[record] combo ativo: d+w
+[record] segmento #18: d+w por 480ms
+[record] combo ativo: w
+[record] segmento #19: w por 431ms
+[record] combo ativo: d+w
+[record] segmento #20: d+w por 698ms
+[record] combo ativo: w
+[record] segmento #21: w por 466ms
+[record] combo ativo: d+w
+[record] segmento #22: d+w por 700ms
+[record] combo ativo: w
+[record] segmento #23: w por 1731ms
+[record] combo ativo: d+w
+[record] segmento #24: d+w por 248ms
+[record] combo ativo: w
+[record] segmento #25: w por 1416ms
+[record] combo ativo: d+w
+[record] segmento #26: d+w por 264ms
+[record] combo ativo: w
+[record] segmento #27: w por 550ms
+[record] combo ativo: d+w
+[record] segmento #28: d+w por 1049ms
+[record] combo ativo: d
+[record] segmento #29: d por 433ms
+[record] combo ativo: d+s
+[record] segmento #30: d+s por 66ms
+[record] combo ativo: d
+[record] segmento #31: d por 264ms
+[record] combo ativo: d+w
+[record] segmento #32: d+w por 182ms
+[record] combo ativo: w
+[record] segmento #33: w por 383ms
+[record] combo ativo: d+w
+[record] segmento #34: d+w por 549ms
+[record] combo ativo: w
+[record] segmento #35: w por 166ms
+[record] combo ativo: d+w
+[record] segmento #36: d+w por 115ms
+[record] combo ativo: w
+[record] segmento #37: w por 199ms
+[record] combo ativo: d+w
+[record] segmento #38: d+w por 333ms
+[record] combo ativo: w
+[record] segmento #39: w por 483ms
+[record] combo ativo: a+w
+[record] segmento #40: a+w por 150ms
+[record] combo ativo: w
+[record] segmento #41: w por 1716ms
+[record] combo ativo: a+w
+[record] segmento #42: a+w por 2230ms
+[record] combo ativo: w
+[record] segmento #43: w por 349ms
+[record] combo ativo: a+w
+[record] segmento #44: a+w por 183ms
+[record] combo ativo: w
+[record] segmento #45: w por 150ms
+[record] combo ativo: a+w
+[record] segmento #46: a+w por 49ms
+[record] combo ativo: w
+[record] segmento #47: w por 483ms
+[record] combo ativo: a+w
+[record] segmento #48: a+w por 266ms
+[record] combo ativo: w
+[record] segmento #49: w por 7786ms
+[record] combo ativo: a+w
+[record] segmento #50: a+w por 1149ms
+[record] combo ativo: a
+[record] segmento #51: a por 616ms
+[record] combo ativo: a+w
+[record] segmento #52: a+w por 1950ms
+[record] combo ativo: w
+[record] segmento #53: w por 1844ms
+[record] combo ativo: a+w
+[record] segmento #54: a+w por 133ms
+[record] combo ativo: w
+[record] segmento #55: w por 1461ms
+[record] combo ativo: a+w
+[record] segmento #56: a+w por 99ms
+[record] combo ativo: w
+[record] segmento #57: w por 1329ms
+[record] combo ativo: a+w
+[record] segmento #58: a+w por 150ms
+[record] combo ativo: w
+[record] segmento #59: w por 350ms
+[record] combo ativo: a+w
+[record] segmento #60: a+w por 131ms
+[record] combo ativo: w
+[record] segmento #61: w por 232ms
+[record] combo ativo: a+w
+[record] segmento #62: a+w por 165ms
+[record] combo ativo: w
+[record] segmento #63: w por 115ms
+[record] Salvo: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] pier_to_car: 63 segmentos, 50.0s total
+[walk] pier_to_car: 63 segmentos, 50.0s total
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] segmento 1/63: d por 233ms
+[walk]   concluido em 236ms
+[walk] segmento 2/63: d+s por 629ms
+[walk]   concluido em 682ms
+[walk] segmento 3/63: d por 232ms
+[walk]   concluido em 249ms
+[walk] segmento 4/63: d+w por 199ms
+[walk]   concluido em 249ms
+[walk] segmento 5/63: w por 799ms
+[walk]   concluido em 815ms
+[walk] segmento 6/63: a+w por 379ms
+[walk]   concluido em 433ms
+[walk] segmento 7/63: w por 6095ms
+[walk]   concluido em 6111ms
+[walk] segmento 8/63: a+w por 234ms
+[walk]   concluido em 282ms
+[walk] segmento 9/63: w por 1268ms
+[walk]   concluido em 1296ms
+[walk] segmento 10/63: d+w por 116ms
+[walk]   concluido em 165ms
+[walk] segmento 11/63: w por 1083ms
+[walk]   concluido em 1099ms
+[walk] segmento 12/63: d+w por 182ms
+[walk]   concluido em 232ms
+[walk] segmento 13/63: w por 1899ms
+[walk]   concluido em 1899ms
+[walk] segmento 14/63: d+w por 83ms
+[walk]   concluido em 132ms
+[walk] segmento 15/63: w por 1481ms
+[walk]   concluido em 1499ms
+[walk] segmento 16/63: a+w por 115ms
+[walk]   concluido em 149ms
+[walk] segmento 17/63: w por 731ms
+[walk]   concluido em 733ms
+[walk] segmento 18/63: d+w por 480ms
+[walk]   concluido em 532ms
+[walk] segmento 19/63: w por 431ms
+[walk]   concluido em 449ms
+[walk] segmento 20/63: d+w por 698ms
+[walk]   concluido em 733ms
+[walk] segmento 21/63: w por 466ms
+[walk]   concluido em 482ms
+[walk] segmento 22/63: d+w por 700ms
+[walk]   concluido em 749ms
+[walk] segmento 23/63: w por 1731ms
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo segmento | ESC = sair sem salvar
+
+O script apenas ESCUTA teclas — nao envia input ao jogo.
+Amostragem a cada 20ms evita cortes falsos quando W fica segurado e A/D entra/sai.
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] F10 salvar | F11 desfazer segmento | ESC cancelar
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Pode segurar W o tempo todo — A/D adiciona curvas sem cortar W no replay.
+[record] Resolucao de referencia: 2560x1440
+[record] combo ativo: d
+[record] segmento #1: d por 162ms
+[record] combo ativo: d+s
+[record] segmento #2: d+s por 428ms
+[record] combo ativo: d
+[record] segmento #3: d por 346ms
+[record] combo ativo: d+w
+[record] segmento #4: d+w por 142ms
+[record] combo ativo: w
+[record] segmento #5: w por 406ms
+[record] combo ativo: d+w
+[record] segmento #6: d+w por 244ms
+[record] combo ativo: w
+[record] segmento #7: w por 427ms
+[record] combo ativo: d+w
+[record] segmento #8: d+w por 325ms
+[record] combo ativo: w
+[record] segmento #9: w por 509ms
+[record] combo ativo: a+w
+[record] segmento #10: a+w por 204ms
+[record] combo ativo: w
+[record] segmento #11: w por 12273ms
+[record] combo ativo: d+w
+[record] segmento #12: d+w por 1304ms
+[record] combo ativo: w
+[record] segmento #13: w por 491ms
+[record] combo ativo: d+w
+[record] segmento #14: d+w por 449ms
+[record] combo ativo: w
+[record] segmento #15: w por 1083ms
+[record] combo ativo: d+w
+[record] segmento #16: d+w por 244ms
+[record] combo ativo: w
+[record] segmento #17: w por 1284ms
+[record] combo ativo: d+w
+[record] segmento #18: d+w por 245ms
+[record] combo ativo: w
+[record] segmento #19: w por 1470ms
+[record] combo ativo: d+w
+[record] segmento #20: d+w por 1244ms
+[record] combo ativo: d
+[record] segmento #21: d por 937ms
+[record] combo ativo: d+w
+[record] segmento #22: d+w por 653ms
+[record] combo ativo: w
+[record] segmento #23: w por 101ms
+[record] combo ativo: d+w
+[record] segmento #24: d+w por 40ms
+[record] combo ativo: w
+[record] segmento #25: w por 551ms
+[record] combo ativo: d+w
+[record] segmento #26: d+w por 142ms
+[record] combo ativo: w
+[record] segmento #27: w por 2858ms
+[record] combo ativo: a+w
+[record] segmento #28: a+w por 1736ms
+[record] combo ativo: w
+[record] segmento #29: w por 571ms
+[record] combo ativo: a+w
+[record] segmento #30: a+w por 183ms
+[record] combo ativo: w
+[record] segmento #31: w por 348ms
+[record] combo ativo: a+w
+[record] segmento #32: a+w por 205ms
+[record] combo ativo: w
+[record] segmento #33: w por 7669ms
+[record] combo ativo: a+w
+[record] segmento #34: a+w por 1474ms
+[record] combo ativo: a
+[record] segmento #35: a por 633ms
+[record] combo ativo: a+w
+[record] segmento #36: a+w por 1433ms
+[record] combo ativo: w
+[record] segmento #37: w por 755ms
+[record] combo ativo: a+w
+[record] segmento #38: a+w por 102ms
+[record] combo ativo: w
+[record] segmento #39: w por 1043ms
+[record] combo ativo: a+w
+[record] segmento #40: a+w por 182ms
+[record] combo ativo: w
+[record] segmento #41: w por 879ms
+[record] combo ativo: a+w
+[record] segmento #42: a+w por 143ms
+[record] combo ativo: w
+[record] segmento #43: w por 653ms
+[record] combo ativo: a+w
+[record] segmento #44: a+w por 205ms
+[record] combo ativo: w
+[record] segmento #45: w por 408ms
+[record] combo ativo: a+w
+[record] segmento #46: a+w por 143ms
+[record] combo ativo: w
+[record] segmento #47: w por 410ms
+[record] combo ativo: a+w
+[record] segmento #48: a+w por 61ms
+[record] combo ativo: w
+[record] segmento #49: w por 552ms
+[record] combo ativo: a+w
+[record] segmento #50: a+w por 143ms
+[record] combo ativo: w
+[record] segmento #51: w por 205ms
+[record] combo ativo: a+w
+[record] segmento #52: a+w por 204ms
+[record] combo ativo: w
+[record] segmento #53: w por 326ms
+[record] Salvo: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] pier_to_car: 53 segmentos, 49.2s total
+[walk] pier_to_car: 53 segmentos, 49.2s total
+[walk] Modo: teclas persistentes (W nao e solto ao adicionar A/D)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] segmento 1/53: d por 162ms
+[walk]   178ms | +d | segurando: d
+[walk] segmento 2/53: d+s por 428ms
+[walk]   431ms | +s | segurando: d+s
+[walk] segmento 3/53: d por 346ms
+[walk]   351ms | -s | segurando: d
+[walk] segmento 4/53: d+w por 142ms
+[walk]   146ms | +w | segurando: d+w
+[walk] segmento 5/53: w por 406ms
+[walk]   414ms | -d | segurando: w
+[walk] segmento 6/53: d+w por 244ms
+[walk]   254ms | +d | segurando: d+w
+[walk] segmento 7/53: w por 427ms
+[walk]   432ms | -d | segurando: w
+[walk] segmento 8/53: d+w por 325ms
+[walk]   331ms | +d | segurando: d+w
+[walk] segmento 9/53: w por 509ms
+[walk]   516ms | -d | segurando: w
+[walk] segmento 10/53: a+w por 204ms
+[walk]   211ms | +a | segurando: a+w
+[walk] segmento 11/53: w por 12273ms
+[walk]   12284ms | -a | segurando: w
+[walk] segmento 12/53: d+w por 1304ms
+[walk]   1319ms | +d | segurando: d+w
+[walk] segmento 13/53: w por 491ms
+[walk]   503ms | -d | segurando: w
+[walk] segmento 14/53: d+w por 449ms
+[walk]   457ms | +d | segurando: d+w
+[walk] segmento 15/53: w por 1083ms
+[walk]   1100ms | -d | segurando: w
+[walk] segmento 16/53: d+w por 244ms
+[walk]   257ms | +d | segurando: d+w
+[walk] segmento 17/53: w por 1284ms
+[walk]   1289ms | -d | segurando: w
+[walk] segmento 18/53: d+w por 245ms
+[walk]   258ms | +d | segurando: d+w
+[walk] segmento 19/53: w por 1470ms
+[walk]   1474ms | -d | segurando: w
+[walk] segmento 20/53: d+w por 1244ms
+[walk] Teclas soltas ao final: dw
+[walk] pier_to_car: 53 segmentos, 49.2s total
+[walk] Modo: teclas persistentes (W nao e solto ao adicionar A/D)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] segmento 1/53: d por 162ms
+[walk]   167ms | +d | segurando: d
+[walk] segmento 2/53: d+s por 428ms
+[walk]   430ms | +s | segurando: d+s
+[walk] segmento 3/53: d por 346ms
+[walk]   351ms | -s | segurando: d
+[walk] segmento 4/53: d+w por 142ms
+[walk]   145ms | +w | segurando: d+w
+[walk] segmento 5/53: w por 406ms
+[walk]   412ms | -d | segurando: w
+[walk] segmento 6/53: d+w por 244ms
+[walk]   253ms | +d | segurando: d+w
+[walk] segmento 7/53: w por 427ms
+[walk]   432ms | -d | segurando: w
+[walk] segmento 8/53: d+w por 325ms
+[walk]   330ms | +d | segurando: d+w
+[walk] segmento 9/53: w por 509ms
+[walk]   517ms | -d | segurando: w
+[walk] segmento 10/53: a+w por 204ms
+[walk]   211ms | +a | segurando: a+w
+[walk] segmento 11/53: w por 12273ms
+[walk]   12284ms | -a | segurando: w
+[walk] segmento 12/53: d+w por 1304ms
+[walk]   1310ms | +d | segurando: d+w
+[walk] segmento 13/53: w por 491ms
+[walk]   500ms | -d | segurando: w
+[walk] segmento 14/53: d+w por 449ms
+[walk]   458ms | +d | segurando: d+w
+[walk] segmento 15/53: w por 1083ms
+[walk]   1083ms | -d | segurando: w
+[walk] segmento 16/53: d+w por 244ms
+[walk]   260ms | +d | segurando: d+w
+[walk] segmento 17/53: w por 1284ms
+[walk]   1290ms | -d | segurando: w
+[walk] segmento 18/53: d+w por 245ms
+[walk]   260ms | +d | segurando: d+w
+[walk] segmento 19/53: w por 1470ms
+[walk]   1474ms | -d | segurando: w
+[walk] segmento 20/53: d+w por 1244ms
+[walk]   1257ms | +d | segurando: d+w
+[walk] segmento 21/53: d por 937ms
+[walk]   942ms | -w | segurando: d
+[walk] segmento 22/53: d+w por 653ms
+[walk]   666ms | +w | segurando: d+w
+[walk] segmento 23/53: w por 101ms
+[walk]   114ms | -d | segurando: w
+[walk] segmento 24/53: d+w por 40ms
+[walk]   54ms | +d | segurando: d+w
+[walk] segmento 25/53: w por 551ms
+[walk]   561ms | -d | segurando: w
+[walk] segmento 26/53: d+w por 142ms
+[walk]   157ms | +d | segurando: d+w
+[walk] segmento 27/53: w por 2858ms
+[walk]   2865ms | -d | segurando: w
+[walk] segmento 28/53: a+w por 1736ms
+[walk]   1743ms | +a | segurando: a+w
+[walk] segmento 29/53: w por 571ms
+[walk]   585ms | -a | segurando: w
+[walk] segmento 30/53: a+w por 183ms
+[walk]   194ms | +a | segurando: a+w
+[walk] segmento 31/53: w por 348ms
+[walk]   364ms | -a | segurando: w
+[walk] segmento 32/53: a+w por 205ms
+[walk]   206ms | +a | segurando: a+w
+[walk] segmento 33/53: w por 7669ms
+[walk]   7680ms | -a | segurando: w
+[walk] segmento 34/53: a+w por 1474ms
+[walk]   1487ms | +a | segurando: a+w
+[walk] segmento 35/53: a por 633ms
+[walk]   642ms | -w | segurando: a
+[walk] segmento 36/53: a+w por 1433ms
+[walk]   1433ms | +w | segurando: a+w
+[walk] segmento 37/53: w por 755ms
+[walk]   771ms | -a | segurando: w
+[walk] segmento 38/53: a+w por 102ms
+[walk]   113ms | +a | segurando: a+w
+[walk] segmento 39/53: w por 1043ms
+[walk]   1057ms | -a | segurando: w
+[walk] segmento 40/53: a+w por 182ms
+[walk]   188ms | +a | segurando: a+w
+[walk] segmento 41/53: w por 879ms
+[walk]   895ms | -a | segurando: w
+[walk] segmento 42/53: a+w por 143ms
+[walk]   145ms | +a | segurando: a+w
+[walk] segmento 43/53: w por 653ms
+[walk]   660ms | -a | segurando: w
+[walk] segmento 44/53: a+w por 205ms
+[walk]   218ms | +a | segurando: a+w
+[walk] segmento 45/53: w por 408ms
+[walk]   419ms | -a | segurando: w
+[walk] segmento 46/53: a+w por 143ms
+[walk]   151ms | +a | segurando: a+w
+[walk] segmento 47/53: w por 410ms
+[walk]   416ms | -a | segurando: w
+[walk] segmento 48/53: a+w por 61ms
+[walk]   67ms | +a | segurando: a+w
+[walk] segmento 49/53: w por 552ms
+[walk]   557ms | -a | segurando: w
+[walk] segmento 50/53: a+w por 143ms
+[walk]   157ms | +a | segurando: a+w
+[walk] segmento 51/53: w por 205ms
+[walk]   211ms | -a | segurando: w
+[walk] segmento 52/53: a+w por 204ms
+[walk]   215ms | +a | segurando: a+w
+[walk] segmento 53/53: w por 326ms
+[walk]   338ms | -a | segurando: w
+[walk] Teclas soltas ao final: w
+[walk] Rota finalizada
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Formato v2 (key_events): cada press/release vira um evento com timestamp.
+Ideal quando W fica segurado e A/D entram/saem para curvas.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo evento | ESC = sair sem salvar
+
+O script apenas ESCUTA teclas — nao envia input ao jogo.
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] Formato: key_events (cada press/release com tempo)
+[record] F10 salvar | F11 desfazer ultimo evento | ESC cancelar
+[record] Segure W o tempo todo; solte W so em curva fechada.
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Resolucao de referencia: 2560x1440
+[record] down s @ 0ms | segurando: s
+[record] down d @ 414ms | segurando: d+s
+[record] up s @ 614ms | segurando: d
+[record] down w @ 979ms | segurando: d+w
+[record] up d @ 1946ms | segurando: w
+[record] down d @ 4609ms | segurando: d+w
+[record] up d @ 4809ms | segurando: w
+[record] down a @ 11606ms | segurando: a+w
+[record] up a @ 11723ms | segurando: w
+[record] down d @ 15924ms | segurando: d+w
+[record] up d @ 17772ms | segurando: w
+[record] down d @ 20607ms | segurando: d+w
+[record] up d @ 20857ms | segurando: w
+[record] down d @ 22074ms | segurando: d+w
+[record] up d @ 22473ms | segurando: w
+[record] down d @ 22805ms | segurando: d+w
+[record] up w @ 23306ms | segurando: d
+[record] down w @ 24252ms | segurando: d+w
+[record] up d @ 25536ms | segurando: w
+[record] down a @ 29049ms | segurando: a+w
+[record] up a @ 30964ms | segurando: w
+[record] down a @ 31664ms | segurando: a+w
+[record] up a @ 31928ms | segurando: w
+[record] down a @ 40141ms | segurando: a+w
+[record] up w @ 41558ms | segurando: a
+[record] down w @ 42241ms | segurando: a+w
+[record] up a @ 43558ms | segurando: w
+[record] down a @ 44592ms | segurando: a+w
+[record] up a @ 44826ms | segurando: w
+[record] down a @ 45325ms | segurando: a+w
+[record] up a @ 45441ms | segurando: w
+[record] down a @ 45858ms | segurando: a+w
+[record] up a @ 45992ms | segurando: w
+[record] down a @ 46708ms | segurando: a+w
+[record] up a @ 46891ms | segurando: w
+[record] down a @ 48508ms | segurando: a+w
+[record] up a @ 48875ms | segurando: w
+[record] up w @ 50025ms | segurando: (nenhuma)
+[record] Salvo: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] pier_to_car: 38 eventos, 52.1s total (formato key_events)
+[walk] pier_to_car: 38 eventos, 52.1s total (formato key_events)
+[walk] Modo: key_events + combo batch (W+D simultaneo)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/38: down s @ 0ms | +s | segurando: s
+[walk] evento 2/38: down d @ 414ms | +d | segurando: s+d
+[walk] evento 3/38: up s @ 614ms | -s | segurando: d
+[walk] evento 4/38: down w @ 979ms | +w | segurando: w+d
+[walk] evento 5/38: up d @ 1946ms | -d | segurando: w
+[walk] evento 6/38: down d @ 4609ms | +d | segurando: w+d
+[walk] evento 7/38: up d @ 4809ms | -d | segurando: w
+[walk] evento 8/38: down a @ 11606ms | +a | segurando: w+a
+[walk] evento 9/38: up a @ 11723ms | -a | segurando: w
+[walk] Teclas soltas ao final: w
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Le o estado REAL do teclado (GetAsyncKeyState) a cada 8ms — captura toques
+rapidos em A/D enquanto W fica segurado, sem confundir duracao das teclas.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo evento | ESC = sair sem salvar
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] Leitura: GetAsyncKeyState (hardware, a cada 8ms)
+[record] F10 salvar | F11 desfazer ultimo evento | ESC cancelar
+[record] Segure W; toque A/D para curvar (toque != mesmo tempo que W)
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Resolucao de referencia: 2560x1440
+[record] down d @ 0ms | toque em d | combo agora: d
+[record] down s @ 280ms | toque em s | combo agora: s+d
+[record] up s @ 629ms | soltou s | continua: d
+[record] down w @ 1046ms | toque em w | combo agora: w+d
+[record] up d @ 1735ms | soltou d | continua: w
+[record] down d @ 5371ms | toque em d | combo agora: w+d
+[record] up d @ 5472ms | soltou d | continua: w
+[record] down d @ 6398ms | toque em d | combo agora: w+d
+[record] up d @ 6533ms | soltou d | continua: w
+[record] down a @ 12286ms | toque em a | combo agora: w+a
+[record] up a @ 12405ms | soltou a | continua: w
+[record] down d @ 15261ms | toque em d | combo agora: w+d
+[record] up d @ 16900ms | soltou d | continua: w
+[record] down d @ 17587ms | toque em d | combo agora: w+d
+[record] up d @ 17986ms | soltou d | continua: w
+[record] down d @ 22151ms | toque em d | combo agora: w+d
+[record] up w @ 22805ms | soltou w | continua: d
+[record] down s @ 23170ms | toque em s | combo agora: s+d
+[record] up s @ 23425ms | soltou s | continua: d
+[record] down w @ 24011ms | toque em w | combo agora: w+d
+[record] up d @ 25030ms | soltou d | continua: w
+[record] down d @ 27783ms | toque em d | combo agora: w+d
+[record] up d @ 27953ms | soltou d | continua: w
+[record] down a @ 28624ms | toque em a | combo agora: w+a
+[record] up a @ 28972ms | soltou a | continua: w
+[record] down a @ 29040ms | toque em a | combo agora: w+a
+[record] up a @ 30614ms | soltou a | continua: w
+[record] down a @ 31132ms | toque em a | combo agora: w+a
+[record] up a @ 31320ms | soltou a | continua: w
+[record] down a @ 32067ms | toque em a | combo agora: w+a
+[record] up a @ 32237ms | soltou a | continua: w
+[record] down a @ 39765ms | toque em a | combo agora: w+a
+[record] up w @ 40851ms | soltou w | continua: a
+[record] down w @ 41824ms | toque em w | combo agora: w+a
+[record] up a @ 43163ms | soltou a | continua: w
+[record] down a @ 49167ms | toque em a | combo agora: w+a
+[record] up w @ 49686ms | soltou w | continua: a
+[record] up a @ 49771ms | soltou a | continua: (nenhuma)
+[record] Salvo: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] pier_to_car: 38 eventos, 51.5s total (formato key_events)
+[walk] pier_to_car: 38 eventos, 51.5s total (formato key_events)
+[walk] Modo: key_events — down=adiciona tecla, up=solta so ela
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/38: down d @ 0ms | toque +d | segurando: d
+[walk] evento 2/38: down s @ 280ms | toque +s | segurando: s+d
+[walk] evento 3/38: up s @ 629ms | soltou -s | segurando: d
+[walk] evento 4/38: down w @ 1046ms | toque +w | segurando: w+d
+[walk] evento 5/38: up d @ 1735ms | soltou -d | segurando: w
+[walk] evento 6/38: down d @ 5371ms | toque +d | segurando: w+d
+[walk] evento 7/38: up d @ 5472ms | soltou -d | segurando: w
+[walk] evento 8/38: down d @ 6398ms | toque +d | segurando: w+d
+[walk] evento 9/38: up d @ 6533ms | soltou -d | segurando: w
+[walk] evento 10/38: down a @ 12286ms | toque +a | segurando: w+a
+[walk] evento 11/38: up a @ 12405ms | soltou -a | segurando: w
+[walk] evento 12/38: down d @ 15261ms | toque +d | segurando: w+d
+[walk] evento 13/38: up d @ 16900ms | soltou -d | segurando: w
+[walk] evento 14/38: down d @ 17587ms | toque +d | segurando: w+d
+[walk] evento 15/38: up d @ 17986ms | soltou -d | segurando: w
+[walk] evento 16/38: down d @ 22151ms | toque +d | segurando: w+d
+[walk] evento 17/38: up w @ 22805ms | soltou -w | segurando: d
+[walk] evento 18/38: down s @ 23170ms | toque +s | segurando: s+d
+[walk] evento 19/38: up s @ 23425ms | soltou -s | segurando: d
+[walk] evento 20/38: down w @ 24011ms | toque +w | segurando: w+d
+[walk] Teclas soltas ao final: wd
+[walk] pier_to_car: 38 eventos, 51.5s total (formato key_events)
+[walk] Modo: key_events — down=adiciona tecla, up=solta so ela
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/38: down d @ 0ms | toque +d | segurando: d
+[walk] evento 2/38: down s @ 280ms | toque +s | segurando: s+d
+[walk] evento 3/38: up s @ 629ms | soltou -s | segurando: d
+[walk] evento 4/38: down w @ 1046ms | toque +w | segurando: w+d
+[walk] evento 5/38: up d @ 1735ms | soltou -d | segurando: w
+[walk] evento 6/38: down d @ 5371ms | toque +d | segurando: w+d
+[walk] evento 7/38: up d @ 5472ms | soltou -d | segurando: w
+[walk] evento 8/38: down d @ 6398ms | toque +d | segurando: w+d
+[walk] evento 9/38: up d @ 6533ms | soltou -d | segurando: w
+[walk] Teclas soltas ao final: w
+[walk] pier_to_car: 38 eventos, 51.5s total (formato key_events)
+[walk] Modo: key_events — down=adiciona tecla, up=solta so ela
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/38: down d @ 0ms | nova +d | ja segurando: (nenhuma) | combo: d
+[walk] evento 2/38: down s @ 280ms | nova +s | ja segurando: d | combo: s+d
+[walk] evento 3/38: up s @ 629ms | soltou -s | combo: d
+[walk] evento 4/38: down w @ 1046ms | nova +w | ja segurando: d | combo: w+d
+[walk] evento 5/38: up d @ 1735ms | soltou -d | combo: w
+[walk] evento 6/38: down d @ 5371ms | nova +d | ja segurando: w | combo: w+d
+[walk] evento 7/38: up d @ 5472ms | soltou -d | combo: w
+[walk] evento 8/38: down d @ 6398ms | nova +d | ja segurando: w | combo: w+d
+[walk] evento 9/38: up d @ 6533ms | soltou -d | combo: w
+[walk] Teclas soltas ao final: w
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Le o estado REAL do teclado (GetAsyncKeyState) a cada 8ms — captura toques
+rapidos em A/D enquanto W fica segurado, sem confundir duracao das teclas.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo evento | ESC = sair sem salvar
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] Leitura: GetAsyncKeyState (hardware, a cada 8ms)
+[record] F10 salvar | F11 desfazer ultimo evento | ESC cancelar
+[record] Segure W; toque A/D para curvar (toque != mesmo tempo que W)
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Resolucao de referencia: 2560x1440
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Le o estado REAL do teclado (GetAsyncKeyState) a cada 8ms — captura toques
+rapidos em A/D enquanto W fica segurado, sem confundir duracao das teclas.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo evento | ESC = sair sem salvar
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] Leitura: GetAsyncKeyState (hardware, a cada 8ms)
+[record] F10 salvar | F11 desfazer ultimo evento | ESC cancelar
+[record] Segure W; toque A/D para curvar (toque != mesmo tempo que W)
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Resolucao de referencia: 2560x1440
+[record] down s @ 0ms | toque em s | combo agora: s
+[record] down d @ 178ms | toque em d | combo agora: s+d
+[record] up s @ 348ms | soltou s | continua: d
+[record] down w @ 576ms | toque em w | combo agora: w+d
+[record] up d @ 1884ms | soltou d | continua: w
+[record] down a @ 4287ms | toque em a | combo agora: w+a
+[record] up a @ 4458ms | soltou a | continua: w
+[record] up w @ 9470ms | soltou w | continua: (nenhuma)
+[record] Salvo: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] pier_to_car: 8 eventos, 10.0s total (formato key_events)
+[walk] pier_to_car: 8 eventos, 10.0s total (formato key_events)
+[walk] Modo: key_events — down=adiciona tecla, up=solta so ela
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/8: down s @ 0ms | nova +s | ja segurando: (nenhuma) | combo: s
+[walk] evento 2/8: down d @ 178ms | nova +d | ja segurando: s | combo: s+d
+[walk] evento 3/8: up s @ 348ms | soltou -s | combo: d
+[walk] evento 4/8: down w @ 576ms | nova +w | ja segurando: d | combo: w+d
+[walk] evento 5/8: up d @ 1884ms | soltou -d | combo: w
+[walk] evento 6/8: down a @ 4287ms | nova +a | ja segurando: w | combo: w+a
+[walk] evento 7/8: up a @ 4458ms | soltou -a | combo: w
+[walk] evento 8/8: up w @ 9470ms | soltou -w | combo: (nenhuma)
+[walk] Rota finalizada
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Timestamps no instante do press/release (pynput + perf_counter), nao polling.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo evento | ESC = sair sem salvar
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] Timestamps: instante do press/release (perf_counter)
+[record] F10 salvar | F11 desfazer ultimo evento | ESC cancelar
+[record] Segure W; toque A/D para curvar
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Resolucao de referencia: 2560x1440
+[record] down d @ 0ms | toque em d | combo agora: d
+[record] down w @ 951ms | toque em w | combo agora: w+d
+[record] up d @ 1800ms | soltou d | continua: w
+[record] up w @ 10802ms | soltou w | continua: (nenhuma)
+[record] Salvo: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] pier_to_car: 4 eventos, 11.5s total (formato key_events)
+[walk] pier_to_car: 4 eventos, 11.5s total (formato key_events)
+[walk] Modo: key_events + relogio absoluto (sem drift acumulado)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/4: down d @ 0ms (real 2ms) | nova +d | ja segurando: (nenhuma) | combo: d
+[walk] evento 2/4: down w @ 951ms (real 965ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 3/4: up d @ 1800ms (real 1809ms) | soltou -d | combo: w
+[walk] evento 4/4: up w @ 10802ms (real 10815ms) | soltou -w | combo: (nenhuma)
+[walk] Rota finalizada | maior skew de timing: 0ms
+[walk] pier_to_car: 4 eventos, 11.5s total (formato key_events)
+[walk] Modo: key_events + relogio absoluto (sem drift acumulado)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/4: down d @ 0ms (real 4ms) | nova +d | ja segurando: (nenhuma) | combo: d
+[walk] evento 2/4: down w @ 951ms (real 954ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 3/4: up d @ 1800ms (real 1804ms) | soltou -d | combo: w
+[walk] evento 4/4: up w @ 10802ms (real 10817ms) | soltou -w | combo: (nenhuma)
+[walk] Rota finalizada | maior skew de timing: 0ms
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Timestamps no instante do press/release (pynput + perf_counter), nao polling.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo evento | ESC = sair sem salvar
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] Timestamps: instante do press/release (perf_counter)
+[record] F10 salvar | F11 desfazer ultimo evento | ESC cancelar
+[record] Segure W; toque A/D para curvar
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Resolucao de referencia: 2560x1440
+[record] down d @ 0ms | toque em d | combo agora: d
+[record] down w @ 1264ms | toque em w | combo agora: w+d
+[record] up d @ 1530ms | soltou d | continua: w
+[record] up w @ 10117ms | soltou w | continua: (nenhuma)
+[record] Salvo: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] pier_to_car: 4 eventos, 10.9s total (formato key_events)
+[walk] pier_to_car: 4 eventos, 10.9s total (formato key_events)
+[walk] Modo: key_events + relogio absoluto (sem drift acumulado)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/4: down d @ 0ms (real 2ms) | nova +d | ja segurando: (nenhuma) | combo: d
+[walk] evento 2/4: down w @ 1264ms (real 1269ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 3/4: up d @ 1530ms (real 1535ms) | soltou -d | combo: w
+[walk] evento 4/4: up w @ 10117ms (real 10119ms) | soltou -w | combo: (nenhuma)
+[walk] Rota finalizada | maior skew de timing: 0ms
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Timestamps no instante do press/release (pynput + perf_counter), nao polling.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo evento | ESC = sair sem salvar
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] Timestamps: instante do press/release (perf_counter)
+[record] F10 salvar | F11 desfazer ultimo evento | ESC cancelar
+[record] Segure W; toque A/D para curvar
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Resolucao de referencia: 2560x1440
+[record] down d @ 0ms | toque em d | combo agora: d
+[record] down w @ 819ms | toque em w | combo agora: w+d
+[record] up d @ 1920ms | soltou d | continua: w
+[record] down d @ 2818ms | toque em d | combo agora: w+d
+[record] up d @ 2917ms | soltou d | continua: w
+[record] up w @ 10533ms | soltou w | continua: (nenhuma)
+[record] Salvo: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] pier_to_car: 6 eventos, 11.5s total (formato key_events)
+[walk] pier_to_car: 6 eventos, 11.5s total (formato key_events)
+[walk] Modo: key_events + relogio absoluto (sem drift acumulado)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/6: down d @ 0ms (real 7ms) | nova +d | ja segurando: (nenhuma) | combo: d
+[walk] evento 2/6: down w @ 819ms (real 824ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 3/6: up d @ 1920ms (real 1924ms) | soltou -d | combo: w
+[walk] evento 4/6: down d @ 2818ms (real 2820ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 5/6: up d @ 2917ms (real 2920ms) | soltou -d | combo: w
+[walk] Teclas soltas ao final: w
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Timestamps no instante do press/release (pynput + perf_counter), nao polling.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo evento | ESC = sair sem salvar
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] Timestamps: instante do press/release (perf_counter)
+[record] F10 salvar | F11 desfazer ultimo evento | ESC cancelar
+[record] Segure W; toque A/D para curvar
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Resolucao de referencia: 2560x1440
+[record] down w @ 0ms | toque em w | combo agora: w
+[record] down d @ 398ms | toque em d | combo agora: w+d
+[record] up d @ 547ms | soltou d | continua: w
+[record] down a @ 3640ms | toque em a | combo agora: w+a
+[record] up a @ 3789ms | soltou a | continua: w
+[record] down d @ 4220ms | toque em d | combo agora: w+d
+[record] up d @ 4320ms | soltou d | continua: w
+[record] up w @ 5484ms | soltou w | continua: (nenhuma)
+[record] Salvo: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] pier_to_car: 8 eventos, 7.0s total (formato key_events)
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Timestamps no instante do press/release (pynput + perf_counter), nao polling.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo evento | ESC = sair sem salvar
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] Timestamps: instante do press/release (perf_counter)
+[record] F10 salvar | F11 desfazer ultimo evento | ESC cancelar
+[record] Segure W; toque A/D para curvar
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Resolucao de referencia: 2560x1440
+[record] down w @ 0ms | toque em w | combo agora: w
+[record] up w @ 6373ms | soltou w | continua: (nenhuma)
+[record] Salvo: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] pier_to_car: 2 eventos, 7.2s total (formato key_events)
+[walk] pier_to_car: 2 eventos, 7.2s total (formato key_events)
+[walk] Modo: key_events + relogio absoluto (sem drift acumulado)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/2: down w @ 0ms (real 5ms) | nova +w | ja segurando: (nenhuma) | combo: w
+[walk] evento 2/2: up w @ 6373ms (real 6380ms) | soltou -w | combo: (nenhuma)
+[walk] Rota finalizada | maior skew de timing: 0ms
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Timestamps no instante do press/release (pynput + perf_counter), nao polling.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo evento | ESC = sair sem salvar
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] Timestamps: instante do press/release (perf_counter)
+[record] F10 salvar | F11 desfazer ultimo evento | ESC cancelar
+[record] Segure W; toque A/D para curvar
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Resolucao de referencia: 2560x1440
+[record] down d @ 0ms | toque em d | combo agora: d
+[record] down w @ 750ms | toque em w | combo agora: w+d
+[record] up d @ 1515ms | soltou d | continua: w
+[record] down d @ 2315ms | toque em d | combo agora: w+d
+[record] up d @ 2464ms | soltou d | continua: w
+[record] down d @ 15508ms | toque em d | combo agora: w+d
+[record] up w @ 15974ms | soltou w | continua: d
+[record] up d @ 16274ms | soltou d | continua: (nenhuma)
+[record] Salvo: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] pier_to_car: 8 eventos, 16.8s total (formato key_events)
+[walk] pier_to_car: 8 eventos, 16.8s total (formato key_events)
+[walk] Modo: key_events + relogio absoluto (sem drift acumulado)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/8: down d @ 0ms (real 3ms) | nova +d | ja segurando: (nenhuma) | combo: d
+[walk] evento 2/8: down w @ 750ms (real 752ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 3/8: up d @ 1515ms (real 1519ms) | soltou -d | combo: w
+[walk] evento 4/8: down d @ 2315ms (real 2318ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 5/8: up d @ 2464ms (real 2469ms) | soltou -d | combo: w
+[walk] evento 6/8: down d @ 15508ms (real 15519ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 7/8: up w @ 15974ms (real 15985ms) | soltou -w | combo: d
+[walk] evento 8/8: up d @ 16274ms (real 16285ms) | soltou -d | combo: (nenhuma)
+[walk] Rota finalizada | maior skew de timing: 0ms
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Timestamps no instante do press/release (pynput + perf_counter), nao polling.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo evento | ESC = sair sem salvar
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] Timestamps: instante do press/release (perf_counter)
+[record] F10 salvar | F11 desfazer ultimo evento | ESC cancelar
+[record] Segure W; toque A/D para curvar
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Resolucao de referencia: 2560x1440
+[record] down d @ 0ms | toque em d | combo agora: d
+[record] down s @ 481ms | toque em s | combo agora: s+d
+[record] up s @ 748ms | soltou s | continua: d
+[record] down w @ 1031ms | toque em w | combo agora: w+d
+[record] up d @ 1164ms | soltou d | continua: w
+[record] down d @ 2116ms | toque em d | combo agora: w+d
+[record] up d @ 2265ms | soltou d | continua: w
+[record] down d @ 2614ms | toque em d | combo agora: w+d
+[record] up d @ 2864ms | soltou d | continua: w
+[record] down a @ 3347ms | toque em a | combo agora: w+a
+[record] up a @ 3513ms | soltou a | continua: w
+[record] down a @ 5847ms | toque em a | combo agora: w+a
+[record] up a @ 5964ms | soltou a | continua: w
+[record] down a @ 6765ms | toque em a | combo agora: w+a
+[record] up a @ 6881ms | soltou a | continua: w
+[record] down d @ 7913ms | toque em d | combo agora: w+d
+[record] up d @ 7980ms | soltou d | continua: w
+[record] up w @ 9480ms | soltou w | continua: (nenhuma)
+[record] Salvo: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] pier_to_car: 18 eventos, 10.0s total (formato key_events)
+[walk] pier_to_car: 18 eventos, 10.0s total (formato key_events)
+[walk] Modo: key_events + relogio absoluto (sem drift acumulado)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/18: down d @ 0ms (real 13ms) | nova +d | ja segurando: (nenhuma) | combo: d
+[walk] evento 2/18: down s @ 481ms (real 496ms) | nova +s | ja segurando: d | combo: s+d
+[walk] evento 3/18: up s @ 748ms (real 763ms) | soltou -s | combo: d
+[walk] evento 4/18: down w @ 1031ms (real 1046ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 5/18: up d @ 1164ms (real 1179ms) | soltou -d | combo: w
+[walk] evento 6/18: down d @ 2116ms (real 2128ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 7/18: up d @ 2265ms (real 2278ms) | soltou -d | combo: w
+[walk] evento 8/18: down d @ 2614ms (real 2627ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 9/18: up d @ 2864ms (real 2878ms) | soltou -d | combo: w
+[walk] evento 10/18: down a @ 3347ms (real 3359ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 11/18: up a @ 3513ms (real 3526ms) | soltou -a | combo: w
+[walk] evento 12/18: down a @ 5847ms (real 5860ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 13/18: up a @ 5964ms (real 5977ms) | soltou -a | combo: w
+[walk] evento 14/18: down a @ 6765ms (real 6774ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 15/18: up a @ 6881ms (real 6891ms) | soltou -a | combo: w
+[walk] evento 16/18: down d @ 7913ms (real 7921ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 17/18: up d @ 7980ms (real 7988ms) | soltou -d | combo: w
+[walk] evento 18/18: up w @ 9480ms (real 9485ms) | soltou -w | combo: (nenhuma)
+[walk] Rota finalizada | maior skew de timing: 0ms
+[walk] pier_to_car: 18 eventos, 10.0s total (formato key_events)
+[walk] Modo: key_events + relogio absoluto (sem drift acumulado)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/18: down d @ 0ms (real 10ms) | nova +d | ja segurando: (nenhuma) | combo: d
+[walk] evento 2/18: down s @ 481ms (real 493ms) | nova +s | ja segurando: d | combo: s+d
+[walk] evento 3/18: up s @ 748ms (real 760ms) | soltou -s | combo: d
+[walk] evento 4/18: down w @ 1031ms (real 1043ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 5/18: up d @ 1164ms (real 1177ms) | soltou -d | combo: w
+[walk] evento 6/18: down d @ 2116ms (real 2126ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 7/18: up d @ 2265ms (real 2277ms) | soltou -d | combo: w
+[walk] evento 8/18: down d @ 2614ms (real 2627ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 9/18: up d @ 2864ms (real 2877ms) | soltou -d | combo: w
+[walk] evento 10/18: down a @ 3347ms (real 3360ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 11/18: up a @ 3513ms (real 3526ms) | soltou -a | combo: w
+[walk] evento 12/18: down a @ 5847ms (real 5860ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 13/18: up a @ 5964ms (real 5977ms) | soltou -a | combo: w
+[walk] evento 14/18: down a @ 6765ms (real 6777ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 15/18: up a @ 6881ms (real 6893ms) | soltou -a | combo: w
+[walk] evento 16/18: down d @ 7913ms (real 7926ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 17/18: up d @ 7980ms (real 7994ms) | soltou -d | combo: w
+[walk] evento 18/18: up w @ 9480ms (real 9493ms) | soltou -w | combo: (nenhuma)
+[walk] Rota finalizada | maior skew de timing: 0ms
+[walk] pier_to_car: 18 eventos, 10.0s total (formato key_events)
+[walk] Modo: key_events + relogio absoluto (sem drift acumulado)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/18: down d @ 0ms (real 6ms) | nova +d | ja segurando: (nenhuma) | combo: d
+[walk] evento 2/18: down s @ 481ms (real 489ms) | nova +s | ja segurando: d | combo: s+d
+[walk] evento 3/18: up s @ 748ms (real 755ms) | soltou -s | combo: d
+[walk] evento 4/18: down w @ 1031ms (real 1038ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 5/18: up d @ 1164ms (real 1172ms) | soltou -d | combo: w
+[walk] evento 6/18: down d @ 2116ms (real 2122ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 7/18: up d @ 2265ms (real 2272ms) | soltou -d | combo: w
+[walk] evento 8/18: down d @ 2614ms (real 2622ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 9/18: up d @ 2864ms (real 2872ms) | soltou -d | combo: w
+[walk] evento 10/18: down a @ 3347ms (real 3355ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 11/18: up a @ 3513ms (real 3522ms) | soltou -a | combo: w
+[walk] evento 12/18: down a @ 5847ms (real 5853ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 13/18: up a @ 5964ms (real 5970ms) | soltou -a | combo: w
+[walk] evento 14/18: down a @ 6765ms (real 6769ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 15/18: up a @ 6881ms (real 6886ms) | soltou -a | combo: w
+[walk] evento 16/18: down d @ 7913ms (real 7919ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 17/18: up d @ 7980ms (real 7985ms) | soltou -d | combo: w
+[walk] evento 18/18: up w @ 9480ms (real 9485ms) | soltou -w | combo: (nenhuma)
+[walk] Rota finalizada | maior skew de timing: 0ms
+[walk] time-scale=1.030 aplicado
+[walk] pier_to_car: 18 eventos, 10.3s total (formato key_events)
+[walk] Modo: key_events + relogio absoluto (sem drift acumulado)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/18: down d @ 0ms (real 0ms) | nova +d | ja segurando: (nenhuma) | combo: d
+[walk] evento 2/18: down s @ 495ms (real 499ms) | nova +s | ja segurando: d | combo: s+d
+[walk] evento 3/18: up s @ 770ms (real 781ms) | soltou -s | combo: d
+[walk] evento 4/18: down w @ 1061ms (real 1064ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 5/18: up d @ 1198ms (real 1214ms) | soltou -d | combo: w
+[walk] evento 6/18: down d @ 2179ms (real 2181ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 7/18: up d @ 2332ms (real 2347ms) | soltou -d | combo: w
+[walk] evento 8/18: down d @ 2691ms (real 2697ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 9/18: up d @ 2949ms (real 2964ms) | soltou -d | combo: w
+[walk] evento 10/18: down a @ 3446ms (real 3448ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 11/18: up a @ 3617ms (real 3631ms) | soltou -a | combo: w
+[walk] evento 12/18: down a @ 6021ms (real 6031ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 13/18: up a @ 6142ms (real 6147ms) | soltou -a | combo: w
+[walk] evento 14/18: down a @ 6967ms (real 6981ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 15/18: up a @ 7086ms (real 7098ms) | soltou -a | combo: w
+[walk] evento 16/18: down d @ 8149ms (real 8164ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 17/18: up d @ 8218ms (real 8231ms) | soltou -d | combo: w
+[walk] evento 18/18: up w @ 9763ms (real 9765ms) | soltou -w | combo: (nenhuma)
+[walk] Rota finalizada | maior skew de timing: 0ms
+Grava uma rota a pe (WASD + tempo) para replay posterior.
+
+Timestamps no instante do press/release (pynput + perf_counter), nao polling.
+
+Uso:
+  1. Personagem no ponto inicial (ex.: grade azul no pier)
+  2. Jogo em foco, mesma camera/resolucao do bot
+  3. Rode: python stash-route/record_route.py
+  4. Ande ate o destino (ex.: carro) usando so W/A/S/D
+  5. F10 = salvar rota | F11 = desfazer ultimo evento | ESC = sair sem salvar
+[record] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] Timestamps: instante do press/release (perf_counter)
+[record] F10 salvar | F11 desfazer ultimo evento | ESC cancelar
+[record] Segure W; toque A/D para curvar
+[record] Ande com W/A/S/D. Nao use mouse.
+[record] Resolucao de referencia: 2560x1440
+[record] down d @ 0ms | toque em d | combo agora: d
+[record] down s @ 300ms | toque em s | combo agora: s+d
+[record] up s @ 433ms | soltou s | continua: d
+[record] down w @ 734ms | toque em w | combo agora: w+d
+[record] up w @ 1133ms | soltou w | continua: d
+[record] down w @ 1467ms | toque em w | combo agora: w+d
+[record] up w @ 2050ms | soltou w | continua: d
+[record] down w @ 2600ms | toque em w | combo agora: w+d
+[record] up d @ 2917ms | soltou d | continua: w
+[record] down d @ 3617ms | toque em d | combo agora: w+d
+[record] up d @ 3817ms | soltou d | continua: w
+[record] down d @ 4200ms | toque em d | combo agora: w+d
+[record] up d @ 4383ms | soltou d | continua: w
+[record] down a @ 6383ms | toque em a | combo agora: w+a
+[record] up a @ 6517ms | soltou a | continua: w
+[record] up w @ 9663ms | soltou w | continua: (nenhuma)
+[record] Salvo: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[record] pier_to_car: 16 eventos, 10.1s total (formato key_events)
+[walk] time-scale=1.200 aplicado
+[walk] pier_to_car: 16 eventos, 12.1s total (formato key_events)
+[walk] Modo: key_events + relogio absoluto (sem drift acumulado)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/16: down d @ 0ms (real 2ms) | nova +d | ja segurando: (nenhuma) | combo: d
+[walk] evento 2/16: down s @ 360ms (real 367ms) | nova +s | ja segurando: d | combo: s+d
+[walk] evento 3/16: up s @ 520ms (real 533ms) | soltou -s | combo: d
+[walk] evento 4/16: down w @ 881ms (real 883ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 5/16: up w @ 1360ms (real 1366ms) | soltou -w | combo: d
+[walk] evento 6/16: down w @ 1761ms (real 1763ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 7/16: up w @ 2461ms (real 2462ms) | soltou -w | combo: d
+[walk] evento 8/16: down w @ 3121ms (real 3128ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 9/16: up d @ 3501ms (real 3511ms) | soltou -d | combo: w
+[walk] evento 10/16: down d @ 4341ms (real 4345ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 11/16: up d @ 4581ms (real 4593ms) | soltou -d | combo: w
+[walk] evento 12/16: down d @ 5041ms (real 5042ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 13/16: up d @ 5261ms (real 5275ms) | soltou -d | combo: w
+[walk] evento 14/16: down a @ 7661ms (real 7675ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 15/16: up a @ 7822ms (real 7824ms) | soltou -a | combo: w
+[walk] Teclas soltas ao final: w
+[walk] time-scale=1.050 aplicado
+[walk] pier_to_car: 16 eventos, 10.6s total (formato key_events)
+[walk] Modo: key_events + relogio absoluto (sem drift acumulado)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/16: down d @ 0ms (real 15ms) | nova +d | ja segurando: (nenhuma) | combo: d
+[walk] evento 2/16: down s @ 315ms (real 315ms) | nova +s | ja segurando: d | combo: s+d
+[walk] evento 3/16: up s @ 455ms (real 465ms) | soltou -s | combo: d
+[walk] evento 4/16: down w @ 771ms (real 780ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 5/16: up w @ 1190ms (real 1196ms) | soltou -w | combo: d
+[walk] evento 6/16: down w @ 1541ms (real 1546ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 7/16: up w @ 2153ms (real 2163ms) | soltou -w | combo: d
+[walk] evento 8/16: down w @ 2731ms (real 2746ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 9/16: up d @ 3064ms (real 3080ms) | soltou -d | combo: w
+[walk] evento 10/16: down d @ 3799ms (real 3813ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 11/16: up d @ 4009ms (real 4012ms) | soltou -d | combo: w
+[walk] evento 12/16: down d @ 4411ms (real 4413ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 13/16: up d @ 4603ms (real 4613ms) | soltou -d | combo: w
+[walk] evento 14/16: down a @ 6703ms (real 6710ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 15/16: up a @ 6844ms (real 6859ms) | soltou -a | combo: w
+[walk] evento 16/16: up w @ 10147ms (real 10160ms) | soltou -w | combo: (nenhuma)
+[walk] Rota finalizada | maior skew de timing: 0ms
+[walk] time-scale=1.010 aplicado
+[walk] pier_to_car: 16 eventos, 10.2s total (formato key_events)
+[walk] Modo: key_events + relogio absoluto (sem drift acumulado)
+[walk] Iniciando em 5s — deixe o jogo em foco
+[walk]   5...
+[walk]   4...
+[walk]   3...
+[walk]   2...
+[walk]   1...
+[walk] evento 1/16: down d @ 0ms (real 15ms) | nova +d | ja segurando: (nenhuma) | combo: d
+[walk] evento 2/16: down s @ 303ms (real 315ms) | nova +s | ja segurando: d | combo: s+d
+[walk] evento 3/16: up s @ 437ms (real 448ms) | soltou -s | combo: d
+[walk] evento 4/16: down w @ 741ms (real 749ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 5/16: up w @ 1144ms (real 1149ms) | soltou -w | combo: d
+[walk] evento 6/16: down w @ 1481ms (real 1481ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 7/16: up w @ 2070ms (real 2082ms) | soltou -w | combo: d
+[walk] evento 8/16: down w @ 2626ms (real 2631ms) | nova +w | ja segurando: d | combo: w+d
+[walk] evento 9/16: up d @ 2946ms (real 2948ms) | soltou -d | combo: w
+[walk] evento 10/16: down d @ 3653ms (real 3664ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 11/16: up d @ 3855ms (real 3865ms) | soltou -d | combo: w
+[walk] evento 12/16: down d @ 4242ms (real 4248ms) | nova +d | ja segurando: w | combo: w+d
+[walk] evento 13/16: up d @ 4427ms (real 4431ms) | soltou -d | combo: w
+[walk] evento 14/16: down a @ 6447ms (real 6461ms) | nova +a | ja segurando: w | combo: w+a
+[walk] evento 15/16: up a @ 6582ms (real 6595ms) | soltou -a | combo: w
+[walk] evento 16/16: up w @ 9759ms (real 9775ms) | soltou -w | combo: (nenhuma)
+[walk] Rota finalizada | maior skew de timing: 0ms
+Construtor FACIL de rota — um segmento por vez.
+
+Muito mais simples que gravar a rota inteira:
+  1. Va ao ponto inicial no jogo
+  2. Segure as teclas do trecho (ex.: so W, ou W+D)
+  3. SPACE = comeca a cronometrar esse segmento
+  4. SPACE de novo = para e salva o segmento
+  5. Repita para cada trecho (reta, curva, escada...)
+  6. F10 = salvar pier_to_car.json
+
+Regra: nao mude teclas no meio do segmento — um combo por vez.
+[build] Destino: C:\Users\daniel\gta-fishing-bot\stash-route\routes\pier_to_car.json
+[build] SPACE = inicio/fim do segmento | F11 = desfazer | F10 = salvar
+[build] Exemplo: segure W -> SPACE -> ande -> SPACE -> segure W+D -> SPACE ...
+[build] Resolucao: 2560x1440
+[build] Segure W/A/S/D antes do SPACE
+[build] >>> segmento 1 INICIOU: w
+[build] <<< segmento 1 SALVO: w por 0.5s
+[build] >>> segmento 2 INICIOU: w
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] ERRO: trunk_slots vazio — rode calibrate_inventory.py
+[stash] ERRO: weight_roi ausente — rode calibrate_inventory.py
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] ERRO: trunk_slots vazio — rode calibrate_inventory.py
+[stash] ERRO: weight_roi ausente — rode calibrate_inventory.py
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] ERRO: weight_roi ausente — rode calibrate_inventory.py
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] ERRO: weight_roi ausente — rode calibrate_inventory.py
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Abrindo inventario: tecla 'i'
+[stash] drag perch: (487,399) -> (1752,511)
+[stash] Fechando inventario: tecla 'esc'
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Abrindo inventario: tecla 'i'
+[stash] drag perch: (487,399) -> (1752,511)
+[stash] Fechando inventario: tecla 'esc'
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Abrindo inventario: tecla 'i'
+[stash] drag trout: (487,399) -> (2030,508)
+[stash] Fechando inventario: tecla 'esc'
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 1: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 2: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 3: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 4: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] Nenhum peixe para transferir nos Pockets
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Abrindo inventario: tecla 'i'
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 1: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 2: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 3: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 4: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] Nenhum peixe para transferir nos Pockets
+[stash] Fechando inventario: tecla 'esc'
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Abrindo inventario: tecla 'i'
+[stash] drag perch: (628,399) -> (1752,511)
+[stash] Fechando inventario: tecla 'esc'
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Abrindo inventario: tecla 'i'
+[stash] drag perch: (628,399) -> (1752,511)
+[stash] Fechando inventario: tecla 'esc'
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Abrindo inventario: tecla 'i'
+[stash] drag perch: (628,399) -> (1752,511)
+[stash] Fechando inventario: tecla 'esc'
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Abrindo inventario: tecla 'i'
+[stash] drag perch: (487,399) -> (1752,511)
+[stash] Fechando inventario: tecla 'esc'
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Abrindo inventario: tecla 'i'
+[stash] drag perch: (487,399) -> (1752,511)
+[stash] Fechando inventario: tecla 'esc'
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Abrindo inventario: tecla 'i'
+[stash] drag perch: (773,407) -> (1752,511)
+[stash] Fechando inventario: tecla 'esc'
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Abrindo inventario: tecla 'i'
+[stash] drag perch: (348,402) -> (1752,511)
+[stash] Fechando inventario: tecla 'esc'
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 1: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 2: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 3: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 4: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr=None) — ignorado
+[stash] Nenhum peixe para transferir nos Pockets
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] AVISO OCR: Tesseract OCR nao encontrado. Instale: https://github.com/UB-Mannheim/tesseract/wiki (tesseract is not installed or it's not in your PATH. See README file for more information.)
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0: vazio ou nao-peixe (ocr=None, roi={'left': 293, 'top': 450, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 1: vazio ou nao-peixe (ocr=None, roi={'left': 432, 'top': 447, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 2: vazio ou nao-peixe (ocr=None, roi={'left': 573, 'top': 447, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 3: vazio ou nao-peixe (ocr=None, roi={'left': 718, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 4: vazio ou nao-peixe (ocr=None, roi={'left': 849, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr=None, roi={'left': 990, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] Nenhum peixe para transferir nos Pockets
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] AVISO OCR: Tesseract OCR nao encontrado. Instale: https://github.com/UB-Mannheim/tesseract/wiki (tesseract is not installed or it's not in your PATH. See README file for more information.)
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0: vazio ou nao-peixe (ocr=None, roi={'left': 293, 'top': 450, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 1: vazio ou nao-peixe (ocr=None, roi={'left': 432, 'top': 447, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 2: vazio ou nao-peixe (ocr=None, roi={'left': 573, 'top': 447, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 3: vazio ou nao-peixe (ocr=None, roi={'left': 718, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 4: vazio ou nao-peixe (ocr=None, roi={'left': 849, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr=None, roi={'left': 990, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] Nenhum peixe para transferir nos Pockets
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> perch (trunk col 0)
+[stash] pocket 1 -> carp (trunk col 1)
+[stash] pocket 2 -> trout (trunk col 2)
+[stash] pocket 3 -> salmon (trunk col 3)
+[stash] pocket 4: vazio ou nao-peixe (ocr='ee', roi={'left': 849, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr='p ffutirrf ng', roi={'left': 990, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] Transferidos: 4
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Abrindo inventario: tecla 'i'
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0: vazio ou nao-peixe (ocr='oo', roi={'left': 293, 'top': 450, 'width': 110, 'height': 36}) — ignorado
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Abrindo inventario: tecla 'i'
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Aguardando 5.0s — foque o GTA...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> perch (trunk col 0)
+[stash] pocket 1 -> carp (trunk col 1)
+[stash] pocket 2 -> trout (trunk col 2)
+[stash] pocket 3 -> salmon (trunk col 3)
+[stash] pocket 4: vazio ou nao-peixe (ocr='ee', roi={'left': 849, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr='p ffutirrf ng', roi={'left': 990, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] drag perch: (348,402) -> (1752,511)
+[stash] drag carp: (487,399) -> (1897,511)
+[stash] drag trout: (628,399) -> (2030,508)
+[stash] drag salmon: (773,407) -> (2178,508)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 4
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Peso: None | cheio=False
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Peso: None | cheio=False
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Peso: None | cheio=False
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Peso: None | cheio=False
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Peso: None | cheio=False
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Peso: None | cheio=False
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Peso: (80.0, 80.0) | cheio=True
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Peso: (78.0, 80.0) | cheio=False
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Peso: (79.0, 80.0) | cheio=True
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Peso: (78.9, 80.0) | cheio=True
+[stash] Abrindo inventario: tecla 'i'
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Abrindo inventario: tecla 'i'
+[stash] AVISO: OCR nao leu peso (texto=None) — stash ignorado. A UI pode nao ter aberto a tempo; aumente ui_open_wait_ms ou weight_read_wait_ms.
+[stash] Fechando inventario: tecla 'esc'
+[stash] Abrindo inventario: tecla 'i'
+[stash] AVISO: OCR nao leu peso (texto=None) — stash ignorado. A UI pode nao ter aberto a tempo; aumente ui_open_wait_ms ou weight_read_wait_ms.
+[stash] Fechando inventario: tecla 'esc'
+[stash] Abrindo inventario: tecla 'i'
+[stash] AVISO: OCR nao leu peso (texto=None) — stash ignorado. A UI pode nao ter aberto a tempo; aumente ui_open_wait_ms ou weight_read_wait_ms.
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Debug: recorte do peso salvo em C:\Users\daniel\gta-fishing-bot\stash-route\debug_ocr\weight_fail_crop.png
+[stash] Debug: canto da tela salvo em C:\Users\daniel\gta-fishing-bot\stash-route\debug_ocr\weight_fail_corner_none.png
+[stash] AVISO: OCR nao leu peso (texto=None) — stash ignorado. roi={'left': 212, 'top': 104, 'width': 118, 'height': 31}. Veja stash-route/debug_ocr/weight_fail_*.png
+[stash] Fechando inventario: tecla 'esc'
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Peso: (79.9, 806.0) | cheio=False
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Peso: (79.9, 806.0) | cheio=False
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Peso: (79.9, 80.0) | cheio=True
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Debug: recorte do peso salvo em C:\Users\daniel\gta-fishing-bot\stash-route\debug_ocr\weight_fail_crop.png
+[stash] Debug: canto da tela salvo em C:\Users\daniel\gta-fishing-bot\stash-route\debug_ocr\weight_fail_corner_none.png
+[stash] AVISO: OCR nao leu peso (texto=None) — stash ignorado. roi={'left': 198, 'top': 104, 'width': 135, 'height': 31}. Veja stash-route/debug_ocr/weight_fail_*.png
+[stash] Fechando inventario: tecla 'esc'
+[stash] ERRO Tesseract: pytesseract nao instalado. Rode: pip install -r requirements-stash.txt
+[stash] ERRO Tesseract: pytesseract nao instalado. Rode: pip install -r requirements-stash.txt
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> perch (trunk col 0)
+[stash] pocket 1 -> salmon (trunk col 3)
+[stash] pocket 2: vazio ou nao-peixe (ocr='et', roi={'left': 573, 'top': 447, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 3: vazio ou nao-peixe (ocr='et', roi={'left': 718, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 4: vazio ou nao-peixe (ocr='ee', roi={'left': 849, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5 -> perch (trunk col 0)
+[stash] drag perch: (348,402) -> (1752,511)
+[stash] drag salmon: (487,399) -> (2178,508)
+[stash] drag perch: (1045,407) -> (1752,511)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 3
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 78.4 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> perch (trunk col 0)
+[stash] pocket 1 -> carp (trunk col 1)
+[stash] pocket 2 -> trout (trunk col 2)
+[stash] pocket 3 -> salmon (trunk col 3)
+[stash] pocket 4: vazio ou nao-peixe (ocr='ee', roi={'left': 849, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr='p ffutirrf ng', roi={'left': 990, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] drag perch: (348,402) -> (1752,511)
+[stash] drag carp: (487,399) -> (1897,511)
+[stash] drag trout: (628,399) -> (2030,508)
+[stash] drag salmon: (773,407) -> (2178,508)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 4
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 6.3 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 6.7 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 1.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 7.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 77.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 8.1 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 8.3 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 8.7 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 8.8 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 12.9 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 4.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 1.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+Transfere peixes do bolso para o trunk por especie.
+
+Uso:
+  python stash-route/stash_inventory.py --dry-run     # so le OCR, sem arrastar
+  python stash-route/stash_inventory.py --stash       # abre I, arrasta, ESC
+  python stash-route/stash_inventory.py --drag 2 perch  # testa 1 drag
+
+Antes: rode calibrate_inventory.py com inventario aberto (I).
+[stash] Peso: (28.5, 80.0) | cheio=False
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 36.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 41.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> salmon (trunk col 3)
+[stash] pocket 1: vazio ou nao-peixe (ocr='fpercn', roi={'left': 432, 'top': 447, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 2 -> trout (trunk col 2)
+[stash] pocket 3 -> carp (trunk col 1)
+[stash] pocket 4: vazio ou nao-peixe (ocr='ee', roi={'left': 849, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr='pfeermuisgkas', roi={'left': 990, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] drag salmon: (348,402) -> (2178,508)
+[stash] drag trout: (628,399) -> (2030,508)
+[stash] drag carp: (773,407) -> (1897,511)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 3
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> carp (trunk col 1)
+[stash] pocket 1: vazio ou nao-peixe (ocr='fpercn', roi={'left': 432, 'top': 447, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 2 -> trout (trunk col 2)
+[stash] pocket 3: vazio ou nao-peixe (ocr='eet', roi={'left': 718, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 4: vazio ou nao-peixe (ocr='ee', roi={'left': 849, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr='pfeermuisgkas', roi={'left': 990, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] drag carp: (348,402) -> (1897,511)
+[stash] drag trout: (628,399) -> (2030,508)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 2
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> perch (trunk col 0)
+[stash] pocket 1 -> carp (trunk col 1)
+[stash] pocket 2 -> trout (trunk col 2)
+[stash] pocket 3 -> salmon (trunk col 3)
+[stash] pocket 4: vazio ou nao-peixe (ocr='om eae ee', roi={'left': 849, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr='pfeermuisgkas', roi={'left': 990, 'top': 455, 'width': 110, 'height': 36}) — ignorado
+[stash] drag perch: (348,402) -> (1752,511)
+[stash] drag carp: (487,399) -> (1897,511)
+[stash] drag trout: (628,399) -> (2030,508)
+[stash] drag salmon: (773,407) -> (2178,508)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 4
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0: vazio ou nao-peixe (ocr='pforun', roi={'left': 291, 'top': 448, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 1 -> carp (trunk col 1)
+[stash] pocket 2: vazio ou nao-peixe (ocr='e stout', roi={'left': 571, 'top': 448, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 3: vazio ou nao-peixe (ocr='seseree', roi={'left': 712, 'top': 454, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 4: vazio ou nao-peixe (ocr='megdiouon', roi={'left': 851, 'top': 448, 'width': 110, 'height': 36}) — ignorado
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> perch (trunk col 0)
+[stash] pocket 1 -> carp (trunk col 1)
+[stash] pocket 2: vazio ou nao-peixe (ocr='seueee', roi={'left': 571, 'top': 454, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 3: vazio ou nao-peixe (ocr='re', roi={'left': 712, 'top': 457, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 4: vazio ou nao-peixe (ocr='pioyalvuull', roi={'left': 851, 'top': 450, 'width': 110, 'height': 36}) — ignorado
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> perch (trunk col 0)
+[stash] pocket 1 -> carp (trunk col 1)
+[stash] pocket 2: vazio ou nao-peixe (ocr='oe tul', roi={'left': 571, 'top': 449, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 3 -> salmon (trunk col 3)
+[stash] pocket 4: vazio ou nao-peixe (ocr='misqdlquotl', roi={'left': 851, 'top': 449, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr='re', roi={'left': 991, 'top': 444, 'width': 110, 'height': 36}) — ignorado
+[stash] drag perch: (344,403) -> (1754,505)
+[stash] drag carp: (490,401) -> (1891,509)
+[stash] drag salmon: (771,403) -> (2178,505)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 3
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> trout (trunk col 2)
+[stash] pocket 1 -> carp (trunk col 1)
+[stash] pocket 2 -> trout (trunk col 2)
+[stash] pocket 3 -> trout (trunk col 2)
+[stash] pocket 4 -> megalodon (trunk col 4)
+[stash] pocket 5 -> carp (trunk col 1)
+[stash] drag trout: (344,403) -> (2029,507)
+[stash] drag carp: (490,401) -> (1891,509)
+[stash] drag trout: (626,401) -> (2029,507)
+[stash] drag trout: (771,403) -> (2029,507)
+[stash] drag megalodon: (906,401) -> (2314,509)
+[stash] drag carp: (1046,396) -> (1891,509)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 6
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> perch (trunk col 0, ocr='perch')
+[stash] pocket 1 -> carp (trunk col 1, ocr='carp')
+[stash] pocket 2 -> trout (trunk col 2, ocr='trout')
+[stash] pocket 3 -> salmon (trunk col 3, ocr='salmon')
+[stash] pocket 4 -> megalodon (trunk col 4, ocr='megalodon')
+[stash] pocket 5: vazio ou nao-peixe (ocr='ee', roi={'left': 991, 'top': 428, 'width': 110, 'height': 36}) — ignorado
+[stash] drag perch: (333,389) -> (1754,505)
+[stash] drag carp: (480,384) -> (1891,509)
+[stash] drag trout: (621,386) -> (2029,507)
+[stash] drag salmon: (763,391) -> (2178,505)
+[stash] drag megalodon: (907,389) -> (2314,509)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 5
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 13.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 20.3 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 29.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 34.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 40.7 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 47.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 53.4 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 59.5 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 66.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 71.9 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 76.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> perch (trunk col 0, ocr='perch')
+[stash] pocket 1 -> salmon (trunk col 3, ocr='salmon')
+[stash] pocket 2 -> carp (trunk col 1, ocr='e carp i')
+[stash] pocket 3 -> trout (trunk col 2, ocr='etrout')
+[stash] pocket 4: vazio ou nao-peixe (ocr='ee', roi={'left': 852, 'top': 437, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr='ee', roi={'left': 991, 'top': 428, 'width': 110, 'height': 36}) — ignorado
+[stash] drag perch: (333,389) -> (1754,505)
+[stash] drag salmon: (480,384) -> (2178,505)
+[stash] drag carp: (621,386) -> (1891,509)
+[stash] drag trout: (763,391) -> (2029,507)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 4
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 10.8 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 15.5 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 19.4 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 24.5 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 28.8 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 33.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 38.7 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 43.8 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 48.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 53.1 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 56.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 60.4 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 64.5 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 68.8 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 72.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> carp (trunk col 1, ocr='o carp')
+[stash] pocket 1 -> perch (trunk col 0, ocr='e perch')
+[stash] pocket 2 -> trout (trunk col 2, ocr='trout')
+[stash] pocket 3 -> carp (trunk col 1, ocr='car ticket')
+[stash] pocket 4: vazio ou nao-peixe (ocr='ee n eee', roi={'left': 852, 'top': 437, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr='ee', roi={'left': 991, 'top': 428, 'width': 110, 'height': 36}) — ignorado
+[stash] drag carp: (333,389) -> (1891,509)
+[stash] drag perch: (480,384) -> (1754,505)
+[stash] drag trout: (621,386) -> (2029,507)
+[stash] drag carp: (763,391) -> (1891,509)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 4
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 10.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 14.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 19.7 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 24.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 29.4 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 35.3 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 39.4 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 42.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> perch (trunk col 0, ocr='perch')
+[stash] pocket 1 -> carp (trunk col 1, ocr='carp')
+[stash] pocket 2 -> salmon (trunk col 3, ocr='salmon')
+[stash] pocket 3 -> carp (trunk col 1, ocr='car ticket')
+[stash] pocket 4 -> trout (trunk col 2, ocr='trout')
+[stash] pocket 5: vazio ou nao-peixe (ocr='ee', roi={'left': 991, 'top': 428, 'width': 110, 'height': 36}) — ignorado
+[stash] drag perch: (333,389) -> (1754,505)
+[stash] drag carp: (480,384) -> (1891,509)
+[stash] drag salmon: (621,386) -> (2178,505)
+[stash] drag carp: (763,391) -> (1891,509)
+[stash] drag trout: (907,389) -> (2029,507)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 5
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 10.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 15.5 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 20.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 24.1 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 28.4 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 33.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 37.5 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> perch (trunk col 0, ocr='perch')
+[stash] pocket 1 -> carp (trunk col 1, ocr='carp')
+[stash] pocket 2 -> salmon (trunk col 3, ocr='salmon')
+[stash] pocket 3 -> carp (trunk col 1, ocr='car ticket')
+[stash] pocket 4 -> trout (trunk col 2, ocr='trout')
+[stash] pocket 5 -> carp (trunk col 1, ocr='lara aier sey saweo asta unni sees ealtcs')
+[stash] drag perch: (333,389) -> (1754,505)
+[stash] drag carp: (480,384) -> (1891,509)
+[stash] drag salmon: (621,386) -> (2178,505)
+[stash] drag carp: (763,391) -> (1891,509)
+[stash] drag trout: (907,389) -> (2029,507)
+[stash] drag carp: (1046,380) -> (1891,509)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 6
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 10.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 14.7 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 18.9 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 23.5 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 28.8 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 34.8 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 41.1 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 47.5 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 54.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 60.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 67.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 73.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 79.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> trout (trunk col 2, ocr='trout')
+[stash] pocket 1 -> perch (trunk col 0, ocr='e perch')
+[stash] pocket 2 -> carp (trunk col 1, ocr='e carp i')
+[stash] pocket 3 -> carp (trunk col 1, ocr='car ticket')
+[stash] pocket 4 -> salmon (trunk col 3, ocr='salmon')
+[stash] pocket 5: vazio ou nao-peixe (ocr='ee', roi={'left': 991, 'top': 428, 'width': 110, 'height': 36}) — ignorado
+[stash] drag trout: (333,389) -> (2029,507)
+[stash] drag perch: (480,384) -> (1754,505)
+[stash] drag carp: (621,386) -> (1891,509)
+[stash] drag carp: (763,391) -> (1891,509)
+[stash] drag salmon: (907,389) -> (2178,505)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 5
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 12.4 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 17.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 23.5 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 29.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 35.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 40.7 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 46.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 52.9 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> perch (trunk col 0, ocr='perch')
+[stash] pocket 1 -> carp (trunk col 1, ocr='carp')
+[stash] pocket 2 -> trout (trunk col 2, ocr='trout')
+[stash] pocket 3 -> carp (trunk col 1, ocr='car ticket')
+[stash] pocket 4 -> salmon (trunk col 3, ocr='salmon')
+[stash] pocket 5: vazio ou nao-peixe (ocr='ee', roi={'left': 991, 'top': 428, 'width': 110, 'height': 36}) — ignorado
+[stash] drag perch: (333,389) -> (1754,505)
+[stash] drag carp: (480,384) -> (1891,509)
+[stash] drag trout: (621,386) -> (2029,507)
+[stash] drag carp: (763,391) -> (1891,509)
+[stash] drag salmon: (907,389) -> (2178,505)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 5
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 12.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 18.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 23.9 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 29.7 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 13.1 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 20.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 26.7 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 31.5 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 36.7 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 43.5 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 48.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 54.9 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 61.3 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 66.9 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 75.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 79.9 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> carp (trunk col 1, ocr='o carp')
+[stash] pocket 1 -> perch (trunk col 0, ocr='e perch')
+[stash] pocket 2 -> trout (trunk col 2, ocr='trout')
+[stash] pocket 3 -> salmon (trunk col 3, ocr='salmon')
+[stash] pocket 4: vazio ou nao-peixe (ocr='a oe', roi={'left': 852, 'top': 437, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr='ee', roi={'left': 991, 'top': 428, 'width': 110, 'height': 36}) — ignorado
+[stash] drag carp: (333,389) -> (1891,509)
+[stash] drag perch: (480,384) -> (1754,505)
+[stash] drag trout: (621,386) -> (2029,507)
+[stash] drag salmon: (763,391) -> (2178,505)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 4
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 12.9 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 30.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 36.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 41.8 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 51.4 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 62.9 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 68.4 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 77.8 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 79.9 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> perch (trunk col 0, ocr='perch')
+[stash] pocket 1 -> trout (trunk col 2, ocr='etrout')
+[stash] pocket 2 -> carp (trunk col 1, ocr='e carp i')
+[stash] pocket 3 -> salmon (trunk col 3, ocr='salmon')
+[stash] pocket 4: vazio ou nao-peixe (ocr='cael', roi={'left': 852, 'top': 437, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr='ee', roi={'left': 991, 'top': 428, 'width': 110, 'height': 36}) — ignorado
+[stash] drag perch: (333,389) -> (1754,505)
+[stash] drag trout: (480,384) -> (2029,507)
+[stash] drag carp: (621,386) -> (1891,509)
+[stash] drag salmon: (763,391) -> (2178,505)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 4
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 17.8 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 24.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 30.7 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 36.4 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 42.7 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 49.4 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 55.8 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 61.9 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 71.6 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 80.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario cheio — transferindo peixes para o trunk
+[stash] Escaneando Pockets (ordem livre — OCR por slot)
+[stash] pocket 0 -> perch (trunk col 0, ocr='perch')
+[stash] pocket 1 -> carp (trunk col 1, ocr='carp')
+[stash] pocket 2 -> salmon (trunk col 3, ocr='salmon')
+[stash] pocket 3 -> trout (trunk col 2, ocr='etrout')
+[stash] pocket 4: vazio ou nao-peixe (ocr='ee', roi={'left': 852, 'top': 437, 'width': 110, 'height': 36}) — ignorado
+[stash] pocket 5: vazio ou nao-peixe (ocr='ee', roi={'left': 991, 'top': 428, 'width': 110, 'height': 36}) — ignorado
+[stash] drag perch: (333,389) -> (1754,505)
+[stash] drag carp: (480,384) -> (1891,509)
+[stash] drag salmon: (621,386) -> (2178,505)
+[stash] drag trout: (763,391) -> (2029,507)
+[stash] Fechando inventario: tecla 'esc'
+[stash] Transferidos: 4
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 12.2 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'
+[stash] Soltando teclas de movimento: w, a, s, d
+[stash] Aguardando 1.2s apos movimento...
+[stash] Abrindo inventario: tecla 'i'
+[stash] Lendo peso...
+[stash] Peso: 18.0 / 80.0 kg (stash se >= 78.4)
+[stash] Inventario com espaco — stash ignorado
+[stash] Fechando inventario: tecla 'esc'

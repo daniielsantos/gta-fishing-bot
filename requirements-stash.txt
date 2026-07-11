@@ -1,0 +1,7 @@
+# Dependencias opcionais para stash por inventario (OCR de especie)
+pytesseract>=0.3.10
+
+# Instale Tesseract OCR no Windows:
+# https://github.com/UB-Mannheim/tesseract/wiki
+# Adicione ao PATH ou configure:
+# pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"

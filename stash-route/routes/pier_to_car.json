@@ -1,0 +1,97 @@
+{
+  "version": 2,
+  "format": "key_events",
+  "resolution": {
+    "width": 2560,
+    "height": 1440
+  },
+  "name": "pier_to_car",
+  "description": "Grade azul -> escada -> SUV branco no pier",
+  "events": [
+    {
+      "t_ms": 0,
+      "key": "d",
+      "action": "down"
+    },
+    {
+      "t_ms": 300,
+      "key": "s",
+      "action": "down"
+    },
+    {
+      "t_ms": 433,
+      "key": "s",
+      "action": "up"
+    },
+    {
+      "t_ms": 734,
+      "key": "w",
+      "action": "down"
+    },
+    {
+      "t_ms": 1133,
+      "key": "w",
+      "action": "up"
+    },
+    {
+      "t_ms": 1467,
+      "key": "w",
+      "action": "down"
+    },
+    {
+      "t_ms": 2050,
+      "key": "w",
+      "action": "up"
+    },
+    {
+      "t_ms": 2600,
+      "key": "w",
+      "action": "down"
+    },
+    {
+      "t_ms": 2917,
+      "key": "d",
+      "action": "up"
+    },
+    {
+      "t_ms": 3617,
+      "key": "d",
+      "action": "down"
+    },
+    {
+      "t_ms": 3817,
+      "key": "d",
+      "action": "up"
+    },
+    {
+      "t_ms": 4200,
+      "key": "d",
+      "action": "down"
+    },
+    {
+      "t_ms": 4383,
+      "key": "d",
+      "action": "up"
+    },
+    {
+      "t_ms": 6383,
+      "key": "a",
+      "action": "down"
+    },
+    {
+      "t_ms": 6517,
+      "key": "a",
+      "action": "up"
+    },
+    {
+      "t_ms": 9663,
+      "key": "w",
+      "action": "up"
+    }
+  ],
+  "metadata": {
+    "recorded_at": "2026-07-10T00:06:21.837338+00:00",
+    "notes": "",
+    "total_duration_ms": 10084
+  }
+}

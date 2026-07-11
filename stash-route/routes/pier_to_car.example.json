@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "format": "segments",
+  "resolution": { "width": 2560, "height": 1440 },
+  "name": "pier_to_car",
+  "description": "Exemplo — copie e ajuste duracoes no edit_route.py",
+  "segments": [
+    { "keys": ["w"], "duration_ms": 5000, "note": "reta inicial na grade" },
+    { "keys": ["w", "d"], "duration_ms": 400, "note": "curva leve" },
+    { "keys": ["w"], "duration_ms": 3000, "note": "ate escada" },
+    { "keys": ["w"], "duration_ms": 2500, "note": "subir escada — ajuste +/-" },
+    { "keys": ["w"], "duration_ms": 8000, "note": "ate o carro" }
+  ],
+  "metadata": {
+    "notes": "Use edit_route.py para ajustar sem regravar"
+  }
+}
